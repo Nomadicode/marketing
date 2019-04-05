@@ -3,19 +3,19 @@
     <div class="inner">
       <section>
         <h2>Send us a message</h2>
-        <form method="post" action="#">
+        <form name="contact" method="post" data-netlify="true">
           <div class="row gtr-uniform">
             <div class="col-6 col-12-large col-6-medium col-12-xsmall">
               <label for="name">Name</label>
-              <input type="text" name="name" id="name" v-model="name"/>
+              <input type="text" name="name" id="name" />
             </div>
             <div class="col-6 col-12-large col-6-medium col-12-xsmall">
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" v-model="email" />
+              <input type="email" name="email" id="email" />
             </div>
             <div class="col-12">
               <label for="message">Message</label>
-              <textarea name="message" id="message" rows="5" resize="none" v-model="message"></textarea>
+              <textarea name="message" id="message" rows="5" resize="none"></textarea>
             </div>
             <div class="col-12">
               <ul class="actions">
