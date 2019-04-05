@@ -3,7 +3,7 @@
     <main-header></main-header>
     <section id="banner">
       <div class="inner">
-        <h2>Software development for early startups</h2>
+        <h2>Software development for early stage startups</h2>
       </div>
     </section>
 
