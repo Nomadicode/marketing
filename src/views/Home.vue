@@ -35,8 +35,6 @@
 
 <script>
 // @ is an alias to /src
-import SpotlightImage from '@/assets/images/spotlight.jpg'
-
 import ContactSection from '@/components/layout/ContactSection.vue'
 import MainFooter from '@/components/layout/MainFooter.vue'
 import MainHeader from '@/components/layout/MainHeader.vue'
@@ -45,11 +43,6 @@ import ServiceSection from '@/components/layout/ServiceSection.vue'
 
 export default {
   name: 'home',
-  data () {
-    return {
-      SpotlightImage: SpotlightImage
-    }
-  },
   components: {
     ContactSection,
 
