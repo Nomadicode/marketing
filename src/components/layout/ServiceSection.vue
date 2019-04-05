@@ -6,16 +6,11 @@
           <span class="icon-wrapper major"><span class="icon fa-paint-brush"></span></span>
           <h3>Design</h3>
           <p>
-            Whether you're looking to build your first website or update an existing website, we offer design services to help you create responsive websites
-            that represent your brand.
+            Your website's design builds confidence and tells a story about your business. We offer services to create responsive, modern designs to help
+            you control the story.
           </p>
           <p>
-            As part of our design process we offer feature collaboration to help you augment your offerings.
-          </p>
-          <p>
-            <strong>
-              Design services start at $150.
-            </strong>
+            As part of our design process we offer feature collaboration to help you augment and define your website's offerings.
           </p>
         </section>
         <section class="content">
@@ -24,23 +19,13 @@
           <p>
             Whether you request a design or bring a design to us, we can take the design and turn it into a functional website.
           </p>
-          <p>
-            <strong>
-              Development services start at $500.
-            </strong>
-          </p>
         </section>
         <section class="content">
           <span class="icon-wrapper major"><span class="icon fa-cloud"></span></span>
           <h3>Hosting and Maintenance</h3>
           <p>
-            Web hosting is often expensive, time consuming, and frustrating. At Nomadicode we understand that you want to focus on your business,
+            Web hosting is often expensive, time consuming, and frustrating. We understand that you want to focus on your business,
             not server administration. For a small monthly fee we handle all the hosting and server administration for you.
-          </p>
-          <p>
-            <strong>
-              Hosting services start at $15 / month.
-            </strong>
           </p>
         </section>
       </div>

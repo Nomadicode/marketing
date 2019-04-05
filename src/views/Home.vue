@@ -13,8 +13,8 @@
           <div class="content">
             <h2>Software Development and Technical Consulting</h2>
             <p>
-              Nomadicode provides services to help early startups create and manage their web presence. We offer reasonable rates and deferment plans
-              so you can get a custom website on a budget.
+              We provide services to help early startups create, update, and manage their web presence. We offer reasonable rates and deferment plans
+              so you can get a custom website without breaking your budget.
             </p>
             <p>Let us be your technical co-founder!</p>
           </div>
