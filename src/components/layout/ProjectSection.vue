@@ -19,41 +19,21 @@
 </template>
 
 <script>
+import { db } from '@/services/firebase'
+
 export default {
   name: 'ProjectSection',
+  firebase: {
+    projects: {
+      source: db.ref('projects'),
+      cancelCallback (err) {
+        console.error(err)
+      }
+    }
+  },
   data () {
     return {
-      projects: [
-        {
-          id: 1,
-          name: 'Driftr',
-          completed: false,
-          details: 'Driftr is an activity finding app to aide locals and travelers in finding events near them personalized to their preferences.',
-          image: null,
-          link: 'https://getdriftr.com'
-        }, {
-          id: 2,
-          name: 'Hypnosisters',
-          completed: false,
-          details: 'Hypnosisters provides hypnotherapy services to aide in stress relief, overcoming challenges, and much more.',
-          image: null,
-          link: 'https://hypnosisters.nomadicode.com'
-        }, {
-          id: 3,
-          name: 'ChronoKids',
-          completed: false,
-          details: 'ChronoKids is a task management and time tracking app for parents to reward their children with screen time for accomplishing tasks.',
-          image: null,
-          link: 'https://chronokids.nomadicode.com'
-        }, {
-          id: 4,
-          name: 'Middlewood Games',
-          completed: true,
-          details: 'Middlewood Games is a tabletop RPG accessory company. They make a variety of accessories to enhance the tabletop RPG experience.',
-          image: null,
-          link: 'https://middlewoodgames.com'
-        }
-      ]
+      projects: {}
     }
   }
 }
