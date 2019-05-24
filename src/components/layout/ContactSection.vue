@@ -44,7 +44,7 @@
           <li>
             <span class="icon-wrapper"><span class="icon fa-phone"></span></span>
             <h3>Phone</h3>
-            <p>(385) 626-6380</p>
+            <p>(435) 915-1059</p>
           </li>
           <li>
             <span class="icon-wrapper"><span class="icon fa-facebook"></span></span>
