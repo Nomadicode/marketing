@@ -37,14 +37,9 @@
             <p><a href="mailto:contact@nomadicode.com">contact@nomadicode.com</a></p>
           </li>
           <li>
-            <span class="icon-wrapper"><span class="icon fa-twitter"></span></span>
-            <h3>Twitter</h3>
-            <p><a href="#">twitter.com/nomadicode</a></p>
-          </li>
-          <li>
             <span class="icon-wrapper"><span class="icon fa-phone"></span></span>
             <h3>Phone</h3>
-            <p>(435) 915-1059</p>
+            <p>(435) 228-5258</p>
           </li>
           <li>
             <span class="icon-wrapper"><span class="icon fa-facebook"></span></span>
