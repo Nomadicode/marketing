@@ -3,29 +3,29 @@
     <div class="inner">
       <div class="features">
         <section class="content">
-          <span class="icon-wrapper major"><span class="icon fa-paint-brush"></span></span>
-          <h3>Design</h3>
-          <p>
-            Your website's design builds confidence and tells a story about your business. We offer services to create responsive, modern designs to help
-            you control the story.
-          </p>
-          <p>
-            As part of our design process we offer feature collaboration to help you augment and define your website's offerings.
-          </p>
-        </section>
-        <section class="content">
           <span class="icon-wrapper major"><span class="icon fa-code"></span></span>
-          <h3>Development</h3>
+          <h3>Custom Development</h3>
           <p>
-            Whether you request a design or bring a design to us, we can take the design and turn it into a functional website.
+            Pre-packaged software applications tend to be overly complicated and often lack key features relevant to your business needs. A custom application has the advantage of
+            being tailored to your needs which lets you focus on more important issues than your software tools. Our team will work with you to build a web app crafted to provide the 
+            highest ROI possible.
           </p>
         </section>
         <section class="content">
-          <span class="icon-wrapper major"><span class="icon fa-cloud"></span></span>
-          <h3>Hosting and Maintenance</h3>
+          <span class="icon-wrapper major"><span class="icon fa-bar-chart"></span></span>
+          <h3>Data and Automation</h3>
           <p>
-            Web hosting is often expensive, time consuming, and frustrating. We understand that you want to focus on your business,
-            not server administration. For a small monthly fee we handle all the hosting and server administration for you.
+            Being able to quickly and easily access your data is vital to running a nimble business. Custom reports can help you visualize your data to easily track strengths and weaknesses.
+            Or you can use your data to increase productivity by automating repetitive tasks, freeing up your time to work on growing your business. Our team is available to work with you to
+            determine how you can use your data to get the most bang for your buck.
+          </p>
+        </section>
+        <section class="content">
+          <span class="icon-wrapper major"><span class="icon fa-comments-o"></span></span>
+          <h3>Consulting</h3>
+          <p>
+            Technology is an ever changing field that can be difficult to keep up with. We can help with anything from making recommendations for 
+            software tools to assisting in hiring tech talent.
           </p>
         </section>
       </div>

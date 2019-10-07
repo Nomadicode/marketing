@@ -59,6 +59,7 @@
 
 <script>
 import { db } from '@/services/firebase'
+import moment from 'moment'
 
 export default {
   name: 'ContactSection',
@@ -85,7 +86,8 @@ export default {
         this.$firebaseRefs.messages.push({
           name: this.name,
           email: this.email,
-          message: this.message
+          message: this.message,
+          messageDate: moment().format('YYYY-MM-DD HH:mm a')
         })
         this.error = false
         this.success = true
