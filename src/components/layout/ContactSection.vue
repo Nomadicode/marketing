@@ -39,7 +39,7 @@
           <li>
             <span class="icon-wrapper"><span class="icon fa-phone"></span></span>
             <h3>Phone</h3>
-            <p>(435) 228-5258</p>
+            <p>(801) 382-8396</p>
           </li>
           <li>
             <span class="icon-wrapper"><span class="icon fa-facebook"></span></span>
