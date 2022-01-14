@@ -3,7 +3,7 @@
     <main-header></main-header>
     <section id="banner">
       <div class="inner">
-        <h2>Building software that takes you places</h2>
+        <h2>Software development for startups and non-profits</h2>
       </div>
     </section>
 
