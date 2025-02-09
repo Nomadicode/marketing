@@ -14,6 +14,7 @@ import {
   DollarSign,
   Clock,
   Zap,
+  Code,
   Github,
   ExternalLink
 } from 'lucide-react';
@@ -94,9 +95,9 @@ function App() {
       description: 'Streamline your operations with custom tools that save time and reduce costs.'
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Quick Launch',
-      description: 'Get your business online fast with our rapid deployment solutions.'
+      icon: <Code className="w-6 h-6" />,
+      title: 'Custom Solutions',
+      description: 'We don\'t use templates, we use your business to create a custom solution for you.'
     }
   ];
 
@@ -174,17 +175,22 @@ function App() {
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <DollarSign className="w-12 h-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Budget-Friendly</h3>
-              <p className="text-gray-600">Flexible payment plans and solutions that fit your budget</p>
+              <p className="text-gray-600">We offer flexible payment plans and solutions that fit your budget</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <Clock className="w-12 h-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Quick Launch</h3>
-              <p className="text-gray-600">Get your business online in weeks, not months</p>
+              <p className="text-gray-600">Time is money, we get you online fast so you can start making money</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <Zap className="w-12 h-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Growth Focus</h3>
-              <p className="text-gray-600">Solutions that help your business grow and scale</p>
+              <p className="text-gray-600">We focus on helping your business grow and scale, we don't just build a website, we build a business</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+              <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Personalized Solutions</h3>
+              <p className="text-gray-600">We don't use templates, we use your business to create a custom solution for you</p>
             </div>
           </div>
         </div>
