@@ -169,7 +169,7 @@ function App() {
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold mb-6">{t('hero.title')}</h1>
             <p className="text-xl mb-8">{t('hero.description')}</p>
-            <p className="text-xl text-center text-gray-300 p-2 block rounded-md bg-blue-500 mb-8">{t('hero.weSpeakSpanish')}</p>
+            {i18n.language === 'en' && <p className="text-xl text-center text-gray-300 p-2 block rounded-md bg-blue-500 mb-8">{t('hero.weSpeakSpanish')}</p>}
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#quote" className="inline-flex items-center justify-center bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
                 {t('hero.button')}
