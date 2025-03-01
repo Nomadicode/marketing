@@ -17,6 +17,7 @@ import type { SuccessStory, Review, InternalProject } from './types/database';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useTranslation } from 'react-i18next';
+import { pageview, event } from './lib/analytics';
 
 interface Service {
   icon: React.ReactNode;
@@ -75,6 +76,11 @@ function App() {
     fetchData();
   }, []);
 
+  // Track page view on component mount
+  useEffect(() => {
+    pageview(window.location.pathname);
+  }, []);
+
   const services: Service[] = [
     {
       icon: <Globe className="w-6 h-6" />,
@@ -119,6 +125,14 @@ function App() {
 
       if (error) throw error;
       
+      // Track successful form submission
+      event({
+        action: 'submit_quote',
+        category: 'engagement',
+        label: formData.category,
+        value: 1
+      });
+      
       setFormData({
         name: '',
         email: '',
@@ -135,6 +149,13 @@ function App() {
       );
       console.log('Quote submitted successfully:', data);
     } catch (error) {
+      // Track form submission error
+      event({
+        action: 'quote_error',
+        category: 'error',
+        label: error instanceof Error ? error.message : 'Unknown error',
+      });
+      
       console.error('Error submitting quote:', error);
       toast.error(
         <div>
