@@ -1,27 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Code2,
-  Rocket,
-  Smartphone,
   Globe,
-  Database,
-  Shield,
   Star,
   ChevronRight,
-  MessageSquare,
   Users,
-  CheckCircle,
   DollarSign,
   Clock,
   Zap,
   Code,
   Github,
-  ExternalLink
+  ExternalLink,
+  CircleHelp
 } from 'lucide-react';
 import { supabase } from './lib/supabase';
 import type { SuccessStory, Review, InternalProject } from './types/database';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from 'react-i18next';
 
 interface Service {
   icon: React.ReactNode;
@@ -30,6 +25,8 @@ interface Service {
 }
 
 function App() {
+  const { t, i18n } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -81,28 +78,39 @@ function App() {
   const services: Service[] = [
     {
       icon: <Globe className="w-6 h-6" />,
-      title: 'Small Business Websites',
-      description: 'Custom, mobile-friendly websites that help your business stand out and attract more customers.'
+      title: t('services.website.title'),
+      description: t('services.website.description')
     },
     {
       icon: <DollarSign className="w-6 h-6" />,
-      title: 'E-commerce Solutions',
-      description: 'Affordable online stores that make selling your products easy and profitable.'
+      title: t('services.ecommerce.title'),
+      description: t('services.ecommerce.description')
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: 'Business Automation',
-      description: 'Streamline your operations with custom tools that save time and reduce costs.'
+      title: t('services.automation.title'),
+      description: t('services.automation.description')
     },
     {
       icon: <Code className="w-6 h-6" />,
-      title: 'Custom Solutions',
-      description: 'We don\'t use templates, we use your business to create a custom solution for you.'
+      title: t('services.custom.title'),
+      description: t('services.custom.description')
+    },
+    {
+      icon: <CircleHelp className="w-6 h-6" />,
+      title: t('services.other.title'),
+      description: t('services.other.description')
     }
   ];
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.category || !formData.budget || !formData.message) {
+      toast.error(t('form.error'));
+      return;
+    }
+
     try {
       const { data, error } = await supabase
         .from('quotes')
@@ -121,8 +129,8 @@ function App() {
 
       toast.success(
         <div>
-          <h3>Quote submitted successfully!</h3>
-          <p>We will get back to you as soon as possible.</p>
+          <h3>{t('form.success')}</h3>
+          <p>{t('form.successMessage')}</p>
         </div>
       );
       console.log('Quote submitted successfully:', data);
@@ -130,11 +138,15 @@ function App() {
       console.error('Error submitting quote:', error);
       toast.error(
         <div>
-          <h3>Error submitting quote:</h3>
-          <p>{error instanceof Error ? error.message : 'An unknown error occurred'}</p>
+          <h3>{t('form.errorSubmission')}</h3>
+          <p>{error instanceof Error ? error.message : t('form.errorSubmission')}</p>
         </div>
       );
     }
+  };
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
   };
 
   return (
@@ -146,20 +158,20 @@ function App() {
             <img src="/nomadicode-logo.png" alt="Nomadicode" className="h-10" />
           </div>
           <div className="hidden md:flex space-x-8">
-            <a href="#services" className="hover:text-blue-200">Services</a>
-            <a href="#portfolio" className="hover:text-blue-200">Portfolio</a>
-            <a href="#testimonials" className="hover:text-blue-200">Testimonials</a>
-            <a href="#contact" className="hover:text-blue-200">Contact</a>
+            <a href="#services" className="hover:text-blue-200">{t('links.services')}</a>
+            <a href="#portfolio" className="hover:text-blue-200">{t('links.portfolio')}</a>
+            <a href="#testimonials" className="hover:text-blue-200">{t('links.testimonials')}</a>
+            <a href="#contact" className="hover:text-blue-200">{t('links.contact')}</a>
           </div>
         </nav>
         
         <div className="container mx-auto px-6 py-24">
           <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-6">Affordable Tech Solutions for Growing Businesses</h1>
-            <p className="text-xl mb-8">Transform your small business with custom digital solutions that won't break the bank. Start your journey to success today.</p>
+            <h1 className="text-5xl font-bold mb-6">{t('hero.title')}</h1>
+            <p className="text-xl mb-8">{t('hero.description')}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#quote" className="inline-flex items-center justify-center bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                Get Your Free Quote
+                {t('hero.button')}
                 <ChevronRight className="ml-2 w-5 h-5" />
               </a>
             </div>
@@ -170,27 +182,27 @@ function App() {
       {/* Why Choose Us Section */}
       <section className="py-16 bg-blue-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Small Businesses Choose Us</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t('pitch.title')}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <DollarSign className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Budget-Friendly</h3>
-              <p className="text-gray-600">We offer flexible payment plans and solutions that fit your budget</p>
+              <h3 className="text-xl font-semibold mb-2">{t('pitch.budget.title')}</h3>
+              <p className="text-gray-600">{t('pitch.budget.description')}</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <Clock className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Quick Launch</h3>
-              <p className="text-gray-600">Time is money, we get you online fast so you can start making money</p>
+              <h3 className="text-xl font-semibold mb-2">{t('pitch.quickLaunch.title')}</h3>
+              <p className="text-gray-600">{t('pitch.quickLaunch.description')}</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <Zap className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Growth Focus</h3>
-              <p className="text-gray-600">We focus on helping your business grow and scale, we don't just build a website, we build a business</p>
+              <h3 className="text-xl font-semibold mb-2">{t('pitch.growth.title')}</h3>
+              <p className="text-gray-600">{t('pitch.growth.description')}</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Personalized Solutions</h3>
-              <p className="text-gray-600">We don't use templates, we use your business to create a custom solution for you</p>
+              <h3 className="text-xl font-semibold mb-2">{t('pitch.personalized.title')}</h3>
+              <p className="text-gray-600">{t('pitch.personalized.description')}</p>
             </div>
           </div>
         </div>
@@ -199,7 +211,7 @@ function App() {
       {/* Services Section */}
       <section id="services" className="py-20">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-16">Solutions for Your Business</h2>
+          <h2 className="text-3xl font-bold text-center mb-16">{t('services.title')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
@@ -215,7 +227,7 @@ function App() {
       {/* Success Stories Section */}
       <section id="portfolio" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-16">Success Stories</h2>
+          <h2 className="text-3xl font-bold text-center mb-16">{t('successStories.title')}</h2>
           {loading ? (
             <div className="text-center">Loading...</div>
           ) : (
@@ -248,7 +260,7 @@ function App() {
       {/* Internal Projects Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-16">Our Projects</h2>
+          <h2 className="text-3xl font-bold text-center mb-16">{t('internalProjects.title')}</h2>
           {loading ? (
             <div className="text-center">Loading...</div>
           ) : (
@@ -275,7 +287,7 @@ function App() {
                           className="inline-flex items-center text-blue-600 hover:text-blue-700"
                         >
                           <ExternalLink className="w-4 h-4 mr-1" />
-                          Visit Project
+                          {t('internalProjects.visit')}
                         </a>
                       )}
                       {project.github_url && (
@@ -286,7 +298,7 @@ function App() {
                           className="inline-flex items-center text-gray-600 hover:text-gray-700"
                         >
                           <Github className="w-4 h-4 mr-1" />
-                          View Code
+                          {t('internalProjects.viewCode')}
                         </a>
                       )}
                     </div>
@@ -301,7 +313,7 @@ function App() {
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-16">From Our Clients</h2>
+          <h2 className="text-3xl font-bold text-center mb-16">{t('testimonials.title')}</h2>
           {loading ? (
             <div className="text-center">Loading...</div>
           ) : (
@@ -331,11 +343,11 @@ function App() {
       {/* Quote Builder Section */}
       <section id="quote" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-16">Get Your Free Quote</h2>
+          <h2 className="text-3xl font-bold text-center mb-16">{t('form.title')}</h2>
           <div className="max-w-2xl mx-auto">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Business Name</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('form.name')}</label>
                 <input
                   type="text"
                   className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -344,7 +356,7 @@ function App() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('form.email')}</label>
                 <input
                   type="email"
                   className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -353,26 +365,28 @@ function App() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">What do you need?</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('form.category')}</label>
                 <select
                   className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   value={formData.category}
                   onChange={(e) => setFormData({...formData, category: e.target.value})}
                 >
-                  <option value="website">Business Website</option>
-                  <option value="ecommerce">Online Store</option>
-                  <option value="automation">Business Automation</option>
-                  <option value="custom">Custom Solution</option>
+                  <option value="website">{t('form.options.website')}</option>
+                  <option value="ecommerce">{t('form.options.ecommerce')}</option>
+                  <option value="automation">{t('form.options.automation')}</option>
+                  <option value="custom">{t('form.options.custom')}</option>
+                  <option value="other">{t('form.options.other')}</option>
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Monthly Budget</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('form.budget')}</label>
                 <select
                   className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   value={formData.budget}
                   onChange={(e) => setFormData({...formData, budget: e.target.value})}
                 >
-                  <option value="">Select a range</option>
+                  <option value="">{t('form.budgetOptions')}</option>
+                  <option value="100-500"> &lt;$500</option>
                   <option value="500-1k">$500 - $1,000</option>
                   <option value="1k-2k">$1,000 - $2,000</option>
                   <option value="2k-5k">$2,000 - $5,000</option>
@@ -380,20 +394,20 @@ function App() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Tell us about your business</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{t('form.details')}</label>
                 <textarea
                   className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  placeholder="What does your business do? What are your goals?"
+                  placeholder={t('form.detailsPlaceholder')}
                 ></textarea>
               </div>
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                Get Your Free Quote
+                {t('form.title')}
               </button>
             </form>
           </div>
@@ -408,42 +422,45 @@ function App() {
               <div className="flex items-center space-x-2 mb-4">
                 <img src="/nomadicode-logo.png" alt="Nomadicode" className="h-8" />
               </div>
-              <p className="text-gray-400">Empowering small businesses with affordable digital solutions.</p>
+              <p className="text-gray-400">{t('footer.pitch')}</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Solutions</h4>
+              <h4 className="font-semibold mb-4">{t('footer.solutions.title')}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Business Websites</li>
-                <li>Online Stores</li>
-                <li>Business Automation</li>
-                <li>Custom Solutions</li>
+                <li>{t('footer.solutions.website')}</li>
+                <li>{t('footer.solutions.ecommerce')}</li>
+                <li>{t('footer.solutions.automation')}</li>
+                <li>{t('footer.solutions.custom')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
+              <h4 className="font-semibold mb-4">{t('footer.contact.title')}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>hello@nomadicode.com</li>
-                <li>+1 (856) 263-0593</li>
+                <li>
+                  <a href="mailto:hello@nomadicode.com" className="hover:text-blue-200">hello@nomadicode.com</a>
+                </li>
+                <li>
+                  <a href="tel:+18562630593" className="hover:text-blue-200">+1 (856) 263-0593</a>
+                </li>
                 <li>
                   <a href="https://wa.me/18562630593" className="hover:text-blue-200">WhatsApp</a>
                 </li>
                 <li>
-                  <a href="https://calendly.com/richard-nomadicode/30min" className="hover:text-blue-200">Book a Free Consultation</a>
+                  <a href="https://calendly.com/richard-nomadicode/30min" className="hover:text-blue-200">{t('footer.contact.consultation')}</a>
                 </li>
               </ul>
             </div>
-            <div>
-              {/* <h4 className="font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>Success Stories</li>
-                <li>Small Business Guide</li>
-                <li>Pricing</li>
-                <li>FAQ</li>
-              </ul> */}
-            </div>
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Nomadicode. All rights reserved.</p>
+          <div className="border-t border-gray-800 mt-8 pt-4 text-center text-gray-400"> 
+            <div className="flex justify-center gap-4 pb-4">
+              <button
+                className={`px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:bg-blue-500 hover:text-white transition-colors ${i18n.language === 'en' ? 'bg-blue-500 text-white' : 'bg-gray-800 text-gray-400'}`}  
+                onClick={() => changeLanguage('en')}>English</button>
+              <button
+                className={`px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:bg-blue-500 hover:text-white transition-colors ${i18n.language === 'es' ? 'bg-blue-500 text-white' : 'bg-gray-800 text-gray-400'}`}
+                onClick={() => changeLanguage('es')}>Español</button>
+            </div>
+            <p>&copy; {new Date().getFullYear()} Nomadicode. {t('footer.rights')}</p>
           </div>
         </div>
       </footer>

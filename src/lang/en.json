@@ -1,0 +1,105 @@
+{
+    "links": {
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact",
+        "testimonials": "Testimonials"
+    },
+    "services": {
+        "title": "Solutions for Your Business",
+        "website": {
+            "title": "Small business websites",
+            "description": "Customized websites, compatible with mobile devices, that help your business stand out and attract more customers."
+        },
+        "ecommerce": {
+            "title": "Ecommerce solutions",
+            "description": "Affordable online stores that make it easier to sell your products and increase your profits."
+        },
+        "automation": {
+            "title": "Business automation",
+            "description": "Automate your operations with customized tools that save time and reduce costs."
+        },
+        "custom": {
+            "title": "Custom solutions",
+            "description": "We don't use templates, we use your business to create a customized solution for you."
+        },
+        "other": {
+            "title": "Other",
+            "description": "Need help with something else? Let us know what you need."
+        }
+    },
+    "form": {
+        "title": "Get Your Free Quote",
+        "name": "Name",
+        "email": "Email",
+        "category": "Category",
+        "budget": "Budget",
+        "budgetOptions": "Select a range",
+        "message": "Message",
+        "options": {
+            "website": "Website",
+            "ecommerce": "Ecommerce",
+            "automation": "Automation",
+            "custom": "Custom",
+            "other": "Other"
+        },
+        "details": "Tell us about your project",
+        "detailsPlaceholder": "What do you need? What are your goals?",
+        "error": "Please fill in all fields",
+        "errorSubmission": "Error submitting quote",
+        "errorSubmissionMessage": "Please try again",
+        "success": "Quote submitted successfully",
+        "successMessage": "Thank you for contacting us, we will get back to you as soon as possible."
+    },
+    "hero": {
+        "title": "Affordable Tech Solutions for Growing Businesses",
+        "description": "Transform your small business with custom digital solutions that won't break the bank. Start your journey to success today.",
+        "button": "Get Your Free Quote"
+    },
+    "pitch": {
+        "title": "Why Small Businesses Choose Us",
+        "budget": {
+            "title": "Budget-Friendly",
+            "description": "We offer flexible payment plans and solutions that fit your budget"
+        },
+        "quickLaunch": {
+            "title": "Quick Launch",
+            "description": "Time is money, we get you online fast so you can start making money"
+        },
+        "growth": {
+            "title": "Growth Focus",
+            "description": "We focus on helping your business grow and scale, we don't just build a website, we build a business"
+        },
+        "personalized": {
+            "title": "Personalized Solutions",
+            "description": "We don't use templates, we use your business to create a customized solution for you."
+        }
+    },
+    "successStories": {
+        "title": "Success Stories"
+    },
+    "internalProjects": {
+        "title": "Our Projects",
+        "visit": "Visit Project",
+        "viewCode": "View Code"
+    },
+    "testimonials": {
+        "title": "From Our Clients"
+    },
+    "footer": {
+        "pitch": "Empowering small businesses with affordable digital solutions",
+        "rights": "All rights reserved",
+        "solutions": {
+            "title": "Solutions",
+            "website": "Website",
+            "ecommerce": "Ecommerce",
+            "automation": "Automation",
+            "custom": "Custom",
+            "other": "Other"
+        },
+        "contact": {
+            "title": "Contact",
+            "consultation": "Book a Free Consultation"
+        }
+    }
+}

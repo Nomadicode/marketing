@@ -1,0 +1,105 @@
+{
+    "links": {
+        "services": "Servicios",
+        "portfolio": "Portfolio",
+        "contact": "Contacto",
+        "testimonials": "Testimonios"
+    },
+    "services": {
+        "title": "Soluciones para su negocio",
+        "website": {
+            "title": "Sitios web de pequeñas empresas",
+            "description": "Sitios web personalizados, compatibles con móviles, que ayudan a su empresa a destacar y atraer más clientes."
+        },
+        "ecommerce": {
+            "title": "Soluciones de comercio electrónico",
+            "description": "Tiendas online económicas que facilitan la venta de sus productos y aumentan sus ganancias."
+        },
+        "automation": {
+            "title": "Automatización de negocios",
+            "description": "Automatice sus operaciones con herramientas personalizadas que ahorran tiempo y reducen costos."
+        },
+        "custom": {
+            "title": "Soluciones personalizadas",
+            "description": "No usamos plantillas, usamos su negocio para crear una solución personalizada para usted."
+        },
+        "other": {
+            "title": "Otro",
+            "description": "¿Necesita ayuda con algo más? Háganoslo saber lo que necesita."
+        }
+    },
+    "form": {
+        "title": "Solicita tu cotización gratis",
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "category": "Categoría",
+        "budget": "Presupuesto",
+        "budgetOptions": "Seleccione un rango",
+        "message": "Mensaje",
+        "options": {
+            "website": "Sitio web",
+            "ecommerce": "Comercio electrónico",
+            "automation": "Automatización",
+            "custom": "Personalizado",
+            "other": "Otro"
+        },
+        "details": "Cuéntanos sobre tu proyecto",
+        "detailsPlaceholder": "¿Qué necesitas? ¿Cuáles son tus objetivos?",
+        "error": "Por favor, complete todos los campos",
+        "errorSubmission": "Error al enviar el mensaje",
+        "errorSubmissionMessage": "Por favor, intente nuevamente",
+        "success": "Mensaje enviado correctamente",
+        "successMessage": "Gracias por contactarnos, nos pondremos en contacto con usted lo antes posible."
+    },
+    "hero": {
+        "title": "Soluciones tecnológicas económicas para negocios en crecimiento",
+        "description": "Transforme su pequeño negocio con soluciones digitales personalizadas que no rompan el banco. ¡Comience su viaje al éxito hoy mismo.",
+        "button": "Solicitar tu cotización gratis"
+    },
+    "pitch": {
+        "title": "¿Por qué pequeños negocios eligen a Nomadicode?",
+        "budget": {
+            "title": "Presupuesto-Friendly",
+            "description": "Ofrecemos planes de pago flexibles y soluciones que se ajustan a su presupuesto"
+        },
+        "quickLaunch": {
+            "title": "Lanzamiento rápido",
+            "description": "El tiempo es dinero, nosotros te ponemos en linea rapido para que puedas empezar a ganar dinero"
+        },
+        "growth": {
+            "title": "Enfoque en el crecimiento",
+            "description": "Nos enfocamos en ayudar a pequeños negocios a crecer y escalar, no solo construimos sitios web, construimos negocios."
+        },
+        "personalized": {
+            "title": "Soluciones personalizadas",
+            "description": "No usamos plantillas, usamos su negocio para crear una solución personalizada para usted."
+        }
+    },
+    "successStories": {
+        "title": "Testimonios de clientes"
+    },
+    "internalProjects": {
+        "title": "Nuestros proyectos",
+        "visit": "Visitar proyecto",
+        "viewCode": "Ver código"
+    },
+    "testimonials": {
+        "title": "De nuestros clientes"
+    },
+    "footer": {
+        "pitch": "Potenciando pequeños negocios con soluciones digitales económicas",
+        "rights": "Todos los derechos reservados",
+        "solutions": {
+            "title": "Soluciones",
+            "website": "Sitio web",
+            "ecommerce": "Comercio electrónico",
+            "automation": "Automatización",
+            "custom": "Personalizado",
+            "other": "Otro"
+        },
+        "contact": {
+            "title": "Contacto",
+            "consultation": "Solicitar una consulta gratis"
+        }
+    }
+}
