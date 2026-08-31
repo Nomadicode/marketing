@@ -10,6 +10,8 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+coverage
+*.tsbuildinfo
 *.local
 
 # Editor directories and files
@@ -24,4 +26,7 @@ dist-ssr
 *.sw?
 
 .env
+.env.local
+.netlify
+.next
 .bolt

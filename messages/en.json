@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "homeTitle": "ContractorKit for Utah specialty contractors | Nomadicode",
+    "homeDescription": "ContractorKit helps specialty contractors collect the project details they need and turn more inquiries into booked jobs.",
+    "servicesTitle": "ContractorKit modules and custom software | Nomadicode",
+    "servicesDescription": "Smart Intake, lead workflows, and custom software for specialty contractors.",
+    "contactTitle": "Request a ContractorKit workflow assessment | Nomadicode",
+    "contactDescription": "Bring one real lead to Nomadicode and find the smallest useful workflow improvement."
+  },
+  "nav": {
+    "services": "Solution",
+    "contact": "Workflow assessment",
+    "menu": "Open menu",
+    "language": "Language"
+  },
+  "hero": {
+    "eyebrow": "Software for Utah specialty contractors",
+    "title": "Turn more inquiries into booked jobs.",
+    "description": "ContractorKit helps specialty contractors respond faster, collect the project details they actually need, and stop qualified leads from slipping through the cracks.",
+    "primaryCta": "See it with one of your leads",
+    "secondaryCta": "How Smart Intake works"
+  },
+  "proof": {
+    "title": "Keep your existing website and tools.",
+    "items": [
+      "Start with smarter lead intake",
+      "Add only workflows that earn their place",
+      "Keep control of your calendar"
+    ]
+  },
+  "services": {
+    "eyebrow": "What is available",
+    "title": "Start with the smallest useful workflow.",
+    "intro": "Keep the site and tools you already use. Begin with a guided intake, then add only the work that proves useful.",
+    "items": [
+      {
+        "title": "Smart Intake",
+        "description": "Guided, trade-specific intake on your existing website. Capture service details, photos, location, and clear next steps in one structured opportunity."
+      },
+      {
+        "title": "Lead Rescue",
+        "description": "Follow up on quiet inquiries and missed calls on a schedule you set, in your words, stopping the moment a customer replies."
+      },
+      {
+        "title": "Custom software",
+        "description": "Engineering for the work no module covers: internal tools, spreadsheet digitization, data cleanup, and integrations."
+      }
+    ],
+    "cta": "See the available work"
+  },
+  "approach": {
+    "eyebrow": "How it works",
+    "title": "Build from a real lead, not a product pitch.",
+    "description": "We start with an inquiry that came through your door and look for the smallest useful improvement.",
+    "steps": [
+      {
+        "title": "Bring a real lead",
+        "description": "Look at how it arrived, what was missing, and where the follow-up slowed down."
+      },
+      {
+        "title": "Build the smallest useful workflow",
+        "description": "Configure services, questions, service area, notifications, and customer messaging for your trade."
+      },
+      {
+        "title": "Measure what changed",
+        "description": "Review lead completeness, response speed, estimate readiness, and repetitive office work removed."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Workflow assessment",
+    "title": "Bring one real lead.",
+    "description": "We will examine it end to end, show where information and time were lost, and name the smallest useful improvement. No obligation.",
+    "name": "Name",
+    "email": "Work email",
+    "company": "Company name",
+    "service": "What do you need help with?",
+    "budget": "Estimated budget",
+    "message": "Tell us about the lead or workflow",
+    "messageHint": "How did the lead arrive? What information was missing?",
+    "select": "Select an option",
+    "services": [
+      "Smart Intake",
+      "Lead Rescue",
+      "Custom software",
+      "Something else"
+    ],
+    "budgets": [
+      "Not sure yet",
+      "Under $2,500",
+      "$2,500–$5,000",
+      "$5,000–$10,000",
+      "$10,000+"
+    ],
+    "submit": "Request a workflow assessment",
+    "sending": "Sending…",
+    "success": "Thanks — your assessment request was sent.",
+    "error": "We could not send your request. Please try again or email hello@nomadicode.com.",
+    "required": "Please complete this field.",
+    "emailInvalid": "Enter a valid email address."
+  },
+  "footer": {
+    "description": "Software and practical workflows for specialty contractors.",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "title": "That page is not here.",
+    "description": "Try one of the links below to find what you need.",
+    "home": "Back to home"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "homeTitle": "ContractorKit para contratistas especializados de Utah | Nomadicode",
+    "homeDescription": "ContractorKit ayuda a contratistas especializados a recopilar los detalles necesarios y convertir más consultas en trabajos contratados.",
+    "servicesTitle": "Módulos ContractorKit y software personalizado | Nomadicode",
+    "servicesDescription": "Smart Intake, flujos de prospectos y software personalizado para contratistas especializados.",
+    "contactTitle": "Solicite una evaluación de flujo de trabajo ContractorKit | Nomadicode",
+    "contactDescription": "Traiga un prospecto real a Nomadicode para encontrar la mejora de flujo de trabajo más útil."
+  },
+  "nav": {
+    "services": "Solución",
+    "contact": "Evaluación de flujo",
+    "menu": "Abrir menú",
+    "language": "Idioma"
+  },
+  "hero": {
+    "eyebrow": "Software para contratistas especializados de Utah",
+    "title": "Convierta más consultas en trabajos contratados.",
+    "description": "ContractorKit ayuda a contratistas especializados a responder más rápido, recopilar los detalles de proyecto que realmente necesitan y evitar que los prospectos calificados se pierdan.",
+    "primaryCta": "Véalo con uno de sus prospectos",
+    "secondaryCta": "Cómo funciona Smart Intake"
+  },
+  "proof": {
+    "title": "Conserve su sitio web y herramientas actuales.",
+    "items": [
+      "Comience con una mejor captura de prospectos",
+      "Agregue solo flujos que ganen su lugar",
+      "Mantenga el control de su calendario"
+    ]
+  },
+  "services": {
+    "eyebrow": "Lo que está disponible",
+    "title": "Comience con el flujo de trabajo más útil.",
+    "intro": "Conserve el sitio y las herramientas que ya usa. Empiece con una captura guiada y agregue solo el trabajo que demuestre ser útil.",
+    "items": [
+      {
+        "title": "Smart Intake",
+        "description": "Captura guiada y específica para su oficio en su sitio existente. Reúna detalles del servicio, fotos, ubicación y siguientes pasos claros en una oportunidad estructurada."
+      },
+      {
+        "title": "Lead Rescue",
+        "description": "Dé seguimiento a consultas silenciosas y llamadas perdidas con un calendario que usted establece y en sus propias palabras, deteniéndose cuando el cliente responde."
+      },
+      {
+        "title": "Software personalizado",
+        "description": "Ingeniería para el trabajo que ningún módulo cubre: herramientas internas, digitalización de hojas de cálculo, limpieza de datos e integraciones."
+      }
+    ],
+    "cta": "Vea el trabajo disponible"
+  },
+  "approach": {
+    "eyebrow": "Cómo funciona",
+    "title": "Construya a partir de un prospecto real, no de un discurso de ventas.",
+    "description": "Comenzamos con una consulta que llegó a su negocio y buscamos la mejora más útil.",
+    "steps": [
+      {
+        "title": "Traiga un prospecto real",
+        "description": "Vea cómo llegó, qué información faltaba y dónde se ralentizó el seguimiento."
+      },
+      {
+        "title": "Construya el flujo más útil",
+        "description": "Configure servicios, preguntas, área de servicio, notificaciones y mensajes para clientes según su oficio."
+      },
+      {
+        "title": "Mida lo que cambió",
+        "description": "Revise la integridad de los prospectos, velocidad de respuesta, preparación para estimar y trabajo administrativo eliminado."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Evaluación de flujo",
+    "title": "Traiga un prospecto real.",
+    "description": "Lo examinaremos de principio a fin, mostraremos dónde se perdió información y tiempo, y nombraremos la mejora más útil. Sin compromiso.",
+    "name": "Nombre",
+    "email": "Correo de trabajo",
+    "company": "Nombre de la empresa",
+    "service": "¿En qué necesita ayuda?",
+    "budget": "Presupuesto estimado",
+    "message": "Cuéntenos sobre el prospecto o flujo",
+    "messageHint": "¿Cómo llegó el prospecto? ¿Qué información faltaba?",
+    "select": "Seleccione una opción",
+    "services": [
+      "Smart Intake",
+      "Lead Rescue",
+      "Software personalizado",
+      "Otra cosa"
+    ],
+    "budgets": [
+      "Aún no estoy seguro",
+      "Menos de $2,500",
+      "$2,500–$5,000",
+      "$5,000–$10,000",
+      "$10,000+"
+    ],
+    "submit": "Solicitar una evaluación de flujo",
+    "sending": "Enviando…",
+    "success": "Gracias — su solicitud de evaluación fue enviada.",
+    "error": "No pudimos enviar su solicitud. Inténtelo de nuevo o escriba a hello@nomadicode.com.",
+    "required": "Complete este campo.",
+    "emailInvalid": "Ingrese un correo electrónico válido."
+  },
+  "footer": {
+    "description": "Software y flujos prácticos para contratistas especializados.",
+    "contact": "Contacto",
+    "rights": "Todos los derechos reservados."
+  },
+  "notFound": {
+    "title": "Esa página no está aquí.",
+    "description": "Use uno de los enlaces para encontrar lo que necesita.",
+    "home": "Volver al inicio"
+  }
+}
