@@ -29,4 +29,5 @@ coverage
 .env.local
 .netlify
 .next
+deno.lock
 .bolt
