@@ -9,9 +9,9 @@ The production domain is currently served by Netlify. Automatic production deplo
 - `NETLIFY_AUTH_TOKEN` — a Netlify personal access token with access only to this production project.
 - `NETLIFY_SITE_ID` — the existing Netlify Project ID for `nomadicode.com`.
 - `NEXT_PUBLIC_SITE_URL` — production canonical origin (`https://nomadicode.com`).
-- `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` — public Supabase project configuration. These must be present for the quote form to submit to the existing `quotes` table.
+- `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` — public Supabase project configuration used by the production build.
 - `SUPABASE_SERVICE_ROLE_KEY` — server-only key for the quote API route. This allows the route to insert after RLS blocks direct browser writes.
-- `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `QUOTE_NOTIFICATION_EMAIL` — required together for email notifications.
+- `BREVO_API_KEY`, `BREVO_FROM_EMAIL`, and `QUOTE_NOTIFICATION_EMAIL` — required together for Brevo (formerly Sendinblue). `BREVO_FROM_NAME` is optional and defaults to `Nomadicode`. Each successful quote insert triggers an email to `QUOTE_NOTIFICATION_EMAIL`; the sender must be verified in Brevo. The quote API also recognizes legacy `SENDINBLUE_API_KEY`, `SENDINBLUE_FROM_EMAIL`, and `SENDINBLUE_FROM_NAME` values if those are already configured in Netlify.
 - `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_SMS_FROM`, and `TWILIO_SMS_TO` — required together for SMS notifications.
 - `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_WHATSAPP_FROM`, and `TWILIO_WHATSAPP_TO` — required together for WhatsApp notifications. Twilio's sender and destination must be WhatsApp-enabled and use its required format (`whatsapp:+...`).
 
@@ -21,4 +21,4 @@ Because `nomadicode.com` is already connected to Netlify, disable Netlify's buil
 
 ## Quote form data flow
 
-The form submits to the same-origin `POST /api/quote` route. The route validates all required fields and the email address, then writes to the existing Supabase `quotes` table with the project's public Supabase URL and anonymous key. The company name is stored with the submitted project details and the selected solution is stored as `category` for compatibility with the existing schema. Supabase Row Level Security must permit anonymous `insert` on that table; no Supabase service-role key is used or exposed.
+The form submits to the same-origin `POST /api/quote` route. The route validates all required fields and the email address, verifies its server-only Supabase and Brevo configuration, then writes to the existing Supabase `quotes` table with the server-only service-role key. The company name is stored with the submitted project details and the selected solution is stored as `category` for compatibility with the existing schema. The route then sends the new-quote email through Brevo. Supabase Row Level Security blocks direct browser writes; the service-role key is never exposed to the browser.

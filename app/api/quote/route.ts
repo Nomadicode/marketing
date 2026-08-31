@@ -48,28 +48,47 @@ function notificationText(quote: Quote) {
   return `New ContractorKit workflow assessment\n\nName: ${quote.name}\nEmail: ${quote.email}\nCompany: ${quote.company}\nSolution: ${quote.service}\nBudget: ${quote.budget}\n\nDetails:\n${quote.message}`;
 }
 
-async function sendNotifications(quote: Quote) {
+type EmailNotificationConfig = {
+  apiKey: string;
+  from: string;
+  fromName: string;
+  to: string;
+};
+
+function getEmailNotificationConfig(): EmailNotificationConfig | null {
+  const apiKey = process.env.BREVO_API_KEY ?? process.env.SENDINBLUE_API_KEY;
+  const from =
+    process.env.BREVO_FROM_EMAIL ?? process.env.SENDINBLUE_FROM_EMAIL;
+  const fromName =
+    process.env.BREVO_FROM_NAME ??
+    process.env.SENDINBLUE_FROM_NAME ??
+    'Nomadicode';
+  const to = process.env.QUOTE_NOTIFICATION_EMAIL;
+  if (!apiKey || !from || !to) return null;
+  return { apiKey, from, fromName, to };
+}
+
+async function sendNotifications(quote: Quote, email: EmailNotificationConfig) {
   const text = notificationText(quote);
   const requests: Promise<Response>[] = [];
-  const email = process.env.QUOTE_NOTIFICATION_EMAIL;
-  if (process.env.RESEND_API_KEY && process.env.RESEND_FROM_EMAIL && email) {
-    requests.push(
-      fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          from: process.env.RESEND_FROM_EMAIL,
-          to: [email],
-          subject: `New workflow assessment: ${quote.name}`,
-          text,
-          html: `<h1>New workflow assessment</h1><p><strong>Name:</strong> ${escapeHtml(quote.name)}<br><strong>Email:</strong> ${escapeHtml(quote.email)}<br><strong>Company:</strong> ${escapeHtml(quote.company)}<br><strong>Solution:</strong> ${escapeHtml(quote.service)}<br><strong>Budget:</strong> ${escapeHtml(quote.budget)}</p><p>${escapeHtml(quote.message).replace(/\n/g, '<br>')}</p>`,
-        }),
+  requests.push(
+    fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        accept: 'application/json',
+        'api-key': email.apiKey,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        sender: { email: email.from, name: email.fromName },
+        to: [{ email: email.to }],
+        subject: `New workflow assessment: ${quote.name}`,
+        textContent: text,
+        htmlContent: `<h1>New workflow assessment</h1><p><strong>Name:</strong> ${escapeHtml(quote.name)}<br><strong>Email:</strong> ${escapeHtml(quote.email)}<br><strong>Company:</strong> ${escapeHtml(quote.company)}<br><strong>Solution:</strong> ${escapeHtml(quote.service)}<br><strong>Budget:</strong> ${escapeHtml(quote.budget)}</p><p>${escapeHtml(quote.message).replace(/\n/g, '<br>')}</p>`,
+        tags: ['quote-notification'],
       }),
-    );
-  }
+    }),
+  );
   const accountSid = process.env.TWILIO_ACCOUNT_SID;
   const authToken = process.env.TWILIO_AUTH_TOKEN;
   if (accountSid && authToken) {
@@ -107,14 +126,21 @@ async function sendNotifications(quote: Quote) {
       );
   }
   const results = await Promise.allSettled(requests);
+  const emailResult = results[0];
+  const emailDelivered =
+    emailResult.status === 'fulfilled' && emailResult.value.ok;
+  if (!emailDelivered) console.error('Quote notification delivery failed');
   if (
-    results.some(
-      (result) =>
-        result.status === 'rejected' ||
-        (result.status === 'fulfilled' && !result.value.ok),
-    )
+    results
+      .slice(1)
+      .some(
+        (result) =>
+          result.status === 'rejected' ||
+          (result.status === 'fulfilled' && !result.value.ok),
+      )
   )
-    console.error('Quote notification delivery failed');
+    console.error('Quote secondary notification delivery failed');
+  return emailDelivered;
 }
 
 export async function POST(request: Request) {
@@ -131,9 +157,15 @@ export async function POST(request: Request) {
     );
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const emailNotification = getEmailNotificationConfig();
   if (!url || !key)
     return NextResponse.json(
       { error: 'Quote service is not configured' },
+      { status: 503 },
+    );
+  if (!emailNotification)
+    return NextResponse.json(
+      { error: 'Quote email notification is not configured' },
       { status: 503 },
     );
   const quote: Quote = {
@@ -159,6 +191,6 @@ export async function POST(request: Request) {
       { error: 'Quote service unavailable' },
       { status: 502 },
     );
-  await sendNotifications(quote);
+  await sendNotifications(quote, emailNotification);
   return NextResponse.json({ ok: true }, { status: 201 });
 }
