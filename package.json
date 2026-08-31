@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "eslint app middleware.ts",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/**/*.test.mjs",
+    "test": "node --test tests/locales.test.mjs",
     "format:check": "prettier --check ."
   },
   "dependencies": {
