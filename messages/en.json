@@ -1,0 +1,503 @@
+{
+  "meta": {
+    "homeTitle": "Nomadicode | Software development agency",
+    "homeDescription": "Nomadicode migrates legacy systems, automates manual work, and ships custom software for teams who'd rather build than babysit spreadsheets.",
+    "servicesTitle": "Services | Nomadicode",
+    "servicesDescription": "Code migrations, automation and scripting, process digitization, and custom development.",
+    "flowdekTitle": "FlowDek | Nomadicode",
+    "flowdekDescription": "One embedded system for estimates, scheduling, notifications, rewards, and reviews.",
+    "workTitle": "Work | Nomadicode",
+    "workDescription": "Products we've built and systems we've modernized, from internal products to client migrations.",
+    "pricingTitle": "Pricing | Nomadicode",
+    "pricingDescription": "Project development or FlowDek as an embedded product.",
+    "aboutTitle": "About | Nomadicode",
+    "aboutDescription": "We build software that outlasts the trend cycle.",
+    "careersTitle": "Careers | Nomadicode",
+    "careersDescription": "Work on real problems for real businesses.",
+    "contactTitle": "Contact | Nomadicode",
+    "contactDescription": "Tell us what you're working with. We'll get back to you within one business day.",
+    "termsTitle": "Terms of Service | Nomadicode",
+    "termsDescription": "Terms of service for Nomadicode's software development services.",
+    "privacyTitle": "Privacy Policy | Nomadicode",
+    "privacyDescription": "How Nomadicode collects, uses, and protects your information."
+  },
+  "nav": {
+    "services": "Services",
+    "flowdek": "FlowDek",
+    "work": "Work",
+    "pricing": "Pricing",
+    "about": "About",
+    "careers": "Careers",
+    "contact": "Contact",
+    "bookCall": "Book a call",
+    "language": "Language",
+    "menu": "Menu",
+    "close": "Close menu"
+  },
+  "footer": {
+    "tagline": "Custom software for teams that need fewer workarounds and fewer fires to put out.",
+    "companyHeading": "Company",
+    "about": "About",
+    "careers": "Careers",
+    "contact": "Contact",
+    "servicesHeading": "Services",
+    "migrations": "Code Migrations",
+    "automation": "Automation",
+    "customDev": "Custom Development",
+    "productHeading": "Product",
+    "legalHeading": "Legal",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "copyright": "© 2026 Nomadicode. All rights reserved."
+  },
+  "home": {
+    "eyebrow": "Software development agency",
+    "title": "Software that\npulls its weight.",
+    "description": "We modernize legacy systems, automate manual work, and build custom software for teams that have outgrown spreadsheets, workarounds, and the one person who knows how everything works.",
+    "primaryCta": "Book a call",
+    "secondaryCta": "See our work",
+    "whatWeDoHeading": "What we do",
+    "allServices": "All services",
+    "services": [
+      {
+        "title": "Code Migrations",
+        "description": "Move legacy systems to modern technology before old software turns a normal Tuesday into a production incident."
+      },
+      {
+        "title": "Automation & Scripting",
+        "description": "Custom scripts and workflows that remove repetitive work from your team's day. Your best people have better things to do."
+      },
+      {
+        "title": "Custom Development",
+        "description": "Web and mobile applications, APIs, and integrations built around the way your business actually works."
+      },
+      {
+        "title": "Process Digitization",
+        "description": "Turn spreadsheets, email threads, and manual processes into systems your team can rely on. Spreadsheets can finally take a breath."
+      }
+    ],
+    "flowdekEyebrow": "Our product",
+    "flowdekName": "FlowDek",
+    "flowdekDescription": "One embedded system for estimates, scheduling, notifications, and reviews. Built for service businesses that would rather run jobs than chase paperwork.",
+    "flowdekCta": "Explore FlowDek",
+    "flowdekModules": [
+      "Smart Estimates",
+      "Quote Generation",
+      "Scheduling",
+      "Notifications",
+      "Rewards & Referrals",
+      "Reviews"
+    ],
+    "productsHeading": "Products",
+    "clientsHeading": "Teams we work with",
+    "howWeWorkHeading": "How we work",
+    "steps": [
+      {
+        "index": "01",
+        "title": "Discover",
+        "description": "We dig into your systems, code, and workflows to find the real leverage. No hard hat required."
+      },
+      {
+        "index": "02",
+        "title": "Build",
+        "description": "We ship focused increments. You can verify each migration and automation against your production systems."
+      },
+      {
+        "index": "03",
+        "title": "Ship",
+        "description": "We deploy carefully, then hand over clear documentation and support so your team owns what we built. No mystery box required."
+      }
+    ],
+    "whyEyebrow": "Why work with Nomadicode",
+    "whyItems": [
+      {
+        "title": "US registered, US based lead",
+        "description": "Founded and led by a native English speaking developer based in the US. You work directly with the person doing the work."
+      },
+      {
+        "title": "Growing nearshore team",
+        "description": "We are growing with vetted Spanish speaking developers in Colombia. You get the same time zones and more competitive rates."
+      },
+      {
+        "title": "Senior work, no middlemen",
+        "description": "Small team, direct communication. No game of telephone between you and the people writing your code."
+      }
+    ],
+    "ctaHeading": "Held together with spreadsheets and hope?",
+    "ctaBody": "Show us what you are working with. We will give you a clear path forward, no sales circus required."
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Full stack development,\nwithout the overhead.",
+    "description": "Modernize what you have. Build what you need next. Keep the business moving while we do it.",
+    "items": [
+      {
+        "index": "01",
+        "title": "Code Migrations",
+        "description": "Moving off an unsupported stack, old framework, or brittle infrastructure is risky when your business depends on it. We plan migrations carefully and keep things running throughout the change, without asking everyone to hold their breath.",
+        "bullets": [
+          "Legacy language and framework upgrades",
+          "Cloud migrations and platform changes",
+          "Database migrations with no downtime at cutover",
+          "Dependency and infrastructure modernization"
+        ]
+      },
+      {
+        "index": "02",
+        "title": "Automation & Script Generation",
+        "description": "If your team repeats the same task by hand every week, it should probably be automated. We build automation that works with the tools you already use, so your team is not stuck copying and pasting until Friday.",
+        "bullets": [
+          "Custom scripts that replace repetitive manual tasks",
+          "Workflow automation across your existing tools",
+          "Internal tooling for ops, finance, and support teams",
+          "Scheduled jobs, data pipelines, and system integrations"
+        ]
+      },
+      {
+        "index": "03",
+        "title": "Process Digitization",
+        "description": "Spreadsheets and email threads work until they do not. We turn manual processes into software your business can rely on as it grows, before version_final_FINAL.xlsx becomes a system of record.",
+        "bullets": [
+          "Turning spreadsheets into proper applications",
+          "Replacing approvals in email with structured workflows",
+          "Internal dashboards built from scattered data sources",
+          "Systems built to scale past what a spreadsheet can hold"
+        ]
+      },
+      {
+        "index": "04",
+        "title": "Custom Development",
+        "description": "When there is no ready made tool for the way you work, we build one. Custom software follows your actual workflow, not a generic template that makes everyone invent a workaround.",
+        "bullets": [
+          "Web and mobile applications built for your workflow",
+          "APIs and third party integrations",
+          "Internal tools and admin systems",
+          "Ongoing support and iteration after launch"
+        ]
+      }
+    ],
+    "ctaHeading": "Not sure where to start?",
+    "ctaBody": "Send us the messy version. We will help you sort it out without making you sit through a sales presentation."
+  },
+  "flowdek": {
+    "eyebrow": "Product by Nomadicode",
+    "title": "FlowDek",
+    "description": "One embedded system for estimates, scheduling, notifications, rewards, and reviews. It fits into the workflow your business already uses, not the other way around.",
+    "primaryCta": "Get a demo",
+    "secondaryCta": "See what's included",
+    "modulesHeading": "What's inside",
+    "modulesDescription": "Six modules that work together or independently. Use only what your business needs.",
+    "modules": [
+      {
+        "title": "Smart Estimate Generation",
+        "description": "Generates accurate estimates automatically from job details, pricing rules, and historical data."
+      },
+      {
+        "title": "Quote Generation",
+        "description": "Turns estimates into polished quotes your customers can approve in a click, before the lead goes cold or calls the next contractor."
+      },
+      {
+        "title": "Appointment Scheduling",
+        "description": "Lets customers book against your real availability, synced with your calendar. Less phone tag, fewer surprises for the crew."
+      },
+      {
+        "title": "Notifications",
+        "description": "Automated reminders and updates by SMS and email, so customers and crews stay in sync without someone playing dispatcher all day."
+      },
+      {
+        "title": "Rewards & Referrals",
+        "description": "Referral tracking and reward incentives that turn happy customers into new business."
+      },
+      {
+        "title": "Reviews",
+        "description": "Automated review requests timed to the moment customers are happiest with the result."
+      }
+    ],
+    "whyHeading": "Why embedded, not standalone",
+    "whyItems": [
+      {
+        "title": "Lives in your product",
+        "description": "No separate login or app. FlowDek runs inside the software your customers already use, so adoption is not another job to manage."
+      },
+      {
+        "title": "Built by developers, for developers",
+        "description": "Clean APIs and documentation for agencies and dev teams. When a client says it is a small change, you will be ready."
+      },
+      {
+        "title": "Modular by design",
+        "description": "Adopt one module or all six. Every piece is independently configurable."
+      }
+    ],
+    "ctaHeading": "See FlowDek in your product",
+    "ctaBody": "Book a walkthrough with our team. We will show you the useful parts first."
+  },
+  "work": {
+    "eyebrow": "Work",
+    "title": "Products we've built,\nsystems we've modernized.",
+    "description": "A look at the products we have built and the systems we have rescued from too many tabs, texts, and spreadsheets.",
+    "productsHeading": "Products and projects",
+    "ctaHeading": "Have something to build?",
+    "ctaBody": "Let's talk about what you're working with."
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Two ways to work with us.",
+    "description": "Choose project based development or FlowDek as an embedded product. Every engagement starts with a scoping call because every project is different, and we do not price from a crystal ball.",
+    "plans": [
+      {
+        "title": "Development Services",
+        "subtitle": "Migrations, automation, and custom software",
+        "price": "Custom quote",
+        "priceNote": "Scoped for your project, complexity, and timeline",
+        "features": [
+          "Fixed scope or ongoing engagement",
+          "Dedicated project lead",
+          "Weekly progress check ins",
+          "Support after launch"
+        ],
+        "ctaLabel": "Request a quote",
+        "ctaHref": "contact"
+      },
+      {
+        "badge": "Product",
+        "title": "FlowDek",
+        "subtitle": "Embedded estimates, scheduling, and more",
+        "price": "From $X/mo",
+        "priceNote": "Per module, based on integration scope",
+        "features": [
+          "Choose modules individually or bundled",
+          "Integration support included",
+          "API access and documentation",
+          "Ongoing updates and support"
+        ],
+        "ctaLabel": "Get a demo",
+        "ctaHref": "flowdek"
+      }
+    ],
+    "disclaimer": "Pricing shown is illustrative. We confirm final pricing during your scoping call, after we understand what needs doing."
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "We build software that outlasts the trend cycle.",
+    "description": "Nomadicode is a software development agency. We modernize legacy systems, automate manual work, and build custom software that solves a real business problem instead of creating a new one.",
+    "believeTitle": "What we believe",
+    "believeBody": "Most software problems do not need a full restart. They need someone to understand what is already there and make careful, well tested changes. We work with real constraints: old codebases, manual processes, and spreadsheets doing the job of proper systems. Then we build something that holds up, even when the person who made the spreadsheet is on vacation.",
+    "whoTitle": "Who we work with",
+    "whoBody": "Small and midsize business owners who need software but do not have an internal team to build it. Contractors and service businesses that need less office chaos and more time on the work. Developers and agencies that need extra capacity when a client request grows teeth. We work as an extension of your team, not a black box.",
+    "approachHeading": "How we approach a project",
+    "approach": [
+      {
+        "title": "Understand before we build",
+        "description": "We spend real time in your existing systems before writing a line of new code."
+      },
+      {
+        "title": "Ship in increments",
+        "description": "Smaller, verifiable milestones over one big rewrite that either works or becomes a very expensive story."
+      },
+      {
+        "title": "Communicate constantly",
+        "description": "Regular updates, no surprises at the end of a sprint or a contract."
+      },
+      {
+        "title": "Hand off cleanly",
+        "description": "Documentation and support so your team can own what we built."
+      }
+    ],
+    "structureTitle": "How we're structured",
+    "structureBody": "Nomadicode is a US registered company founded and led by a US based, native English speaking developer. Right now, you will work directly with that person on every engagement.",
+    "growingTitle": "Where we're headed",
+    "growingBody": "We are building a nearshore team with vetted developers in Colombia who work in the same time zones as our US clients. You get direct communication and accountability at a more competitive rate, without the overhead of a large agency or the uncertainty of an unmanaged offshore contractor.",
+    "builtHeading": "What we've built",
+    "nexShort": "Food delivery for rural towns in Colombia.",
+    "flowdekShort": "Embedded estimates, scheduling, and reviews for service businesses.",
+    "ctaHeading": "Let's talk about what you're building."
+  },
+  "careers": {
+    "eyebrow": "Careers",
+    "title": "Work on real problems for\nreal businesses.",
+    "description": "We're a small, senior team. No layers of process between you and the code.",
+    "subDescription": "Right now, the team is one US based, native English speaking founder and lead developer. We are growing a nearshore team with developers in Colombia.",
+    "traits": [
+      {
+        "title": "Varied work",
+        "description": "Migrations, automation, and product work in the same month, not the same ticket queue forever."
+      },
+      {
+        "title": "Direct client contact",
+        "description": "Talk to the people using what you build, not just a project manager relaying requirements."
+      },
+      {
+        "title": "Remote and async friendly",
+        "description": "Work from wherever, with overlap hours for the team you're collaborating with that week."
+      }
+    ],
+    "noRolesHeading": "No open roles right now",
+    "noRolesBody1": "We hire in bursts as projects come in. Send us your background and we'll reach out when something fits.",
+    "noRolesBody2": "We are planning our first hires in Colombia as demand grows. If you are a Spanish speaking developer there, we would still like to hear from you.",
+    "ctaLabel": "Get in touch"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Tell us what you're\nworking with.",
+    "description": "Whether you need a migration, automation, custom build, or FlowDek, we will get back to you within one business day. Send the messy version. We have seen worse.",
+    "emailLabel": "Email",
+    "responseTimeLabel": "Response time",
+    "responseTime": "Within 1 business day",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "message": "What are you looking to build?",
+      "messagePlaceholder": "Tell us about your project. Messy notes are welcome.",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thanks. We will be in touch within one business day.",
+      "error": "Something went wrong. Please try again or email us directly."
+    }
+  },
+  "terms": {
+    "eyebrow": "Legal",
+    "title": "Terms of Service",
+    "updated": "Effective date: September 13, 2026",
+    "sections": [
+      {
+        "heading": "Agreement to these terms",
+        "body": [
+          "These Terms of Service govern your use of the Nomadicode website and any services provided by Nomadicode LLC. By using the site or engaging us, you agree to these terms. If you do not agree, please do not use the site or our services.",
+          "Nomadicode LLC is a Utah single member limited liability company. These terms apply to the site and to service engagements unless a signed written agreement says otherwise."
+        ]
+      },
+      {
+        "heading": "Services and project agreements",
+        "body": [
+          "Each development engagement is defined by a written proposal, statement of work, master services agreement, or similar agreement accepted by both parties. That agreement controls the scope, deliverables, timeline, fees, payment schedule, acceptance criteria, and any project specific terms.",
+          "If a signed project agreement conflicts with these terms, the signed project agreement controls for that engagement. We may decline work that falls outside an agreed scope until the parties approve a written change."
+        ]
+      },
+      {
+        "heading": "Estimates, fees, and payment",
+        "body": [
+          "Any estimate, timeline, or pricing shown on this site is informational unless it is included in a signed project agreement. Actual cost and timing depend on the agreed scope, technical conditions, third party dependencies, and client responsiveness.",
+          "You are responsible for fees, taxes, and approved expenses described in the applicable project agreement. Late payment may delay work, delivery, support, or access to project materials as permitted by that agreement."
+        ]
+      },
+      {
+        "heading": "Client responsibilities",
+        "body": [
+          "You are responsible for providing accurate requirements, timely decisions, authorized access, and all materials needed for the work. You represent that you have the right to provide any content, data, credentials, trademarks, and instructions you give us.",
+          "You are responsible for maintaining appropriate backups and for reviewing deliverables, approvals, and production changes within the timeframes in the project agreement."
+        ]
+      },
+      {
+        "heading": "Intellectual property",
+        "body": [
+          "Ownership of deliverables is determined by the applicable signed project agreement. Unless that agreement says otherwise, ownership transfers only after all amounts due for the applicable deliverable have been paid in full.",
+          "Nomadicode retains ownership of its preexisting tools, templates, know how, libraries, and general methods. We may use them in delivering the services as long as we do not disclose your confidential information. Third party software remains subject to its own license terms."
+        ]
+      },
+      {
+        "heading": "Confidentiality",
+        "body": [
+          "Each party will protect the other party's nonpublic business, technical, and financial information using reasonable care and will use it only to perform or receive the services. This obligation does not apply to information that is public through no breach, already known without a confidentiality duty, independently developed, or lawfully received from another source.",
+          "A party may disclose confidential information when required by law or legal process, provided it gives notice when legally permitted and reasonably cooperates with efforts to limit disclosure."
+        ]
+      },
+      {
+        "heading": "Site use and third party services",
+        "body": [
+          "You may not misuse the site, interfere with its operation, attempt unauthorized access, introduce malicious code, or use the site in violation of applicable law. Content on the site is owned by Nomadicode or its licensors and may not be copied, modified, or used without permission except as allowed by law.",
+          "The site may link to third party websites, products, or services. We do not control them and are not responsible for their content, availability, security, or privacy practices."
+        ]
+      },
+      {
+        "heading": "Disclaimers and limitation of liability",
+        "body": [
+          "The site is provided on an as available basis. To the fullest extent permitted by law, Nomadicode disclaims warranties not expressly stated in a signed project agreement, including implied warranties of merchantability, fitness for a particular purpose, and noninfringement.",
+          "To the fullest extent permitted by law, Nomadicode will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for lost profits, revenue, data, goodwill, or business opportunity. Any liability related to a specific engagement is governed by its signed project agreement."
+        ]
+      },
+      {
+        "heading": "Termination",
+        "body": [
+          "Either party may end a project engagement as provided in its signed project agreement. Sections that by their nature should survive termination, including payment obligations, confidentiality, intellectual property, disclaimers, and limitations of liability, will survive."
+        ]
+      },
+      {
+        "heading": "Governing law and contact",
+        "body": [
+          "These terms are governed by the laws of the State of Utah, without regard to conflict of law rules. Any dispute that is not resolved informally will be brought in a court with proper jurisdiction in Utah, unless a signed project agreement provides a different process.",
+          "We may update these terms from time to time. Continued use of the site after the effective date of an update means you accept the revised terms. Questions about these terms can be sent to hello@nomadicode.com."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "eyebrow": "Legal",
+    "title": "Privacy Policy",
+    "updated": "Effective date: September 13, 2026",
+    "sections": [
+      {
+        "heading": "Who we are and what this policy covers",
+        "body": [
+          "Nomadicode LLC is a Utah single member limited liability company. This policy explains how we collect, use, disclose, retain, and protect information connected with the Nomadicode website and inquiries submitted through it.",
+          "For privacy questions or requests, contact us at hello@nomadicode.com."
+        ]
+      },
+      {
+        "heading": "Information you provide",
+        "body": [
+          "When you use our contact form, we collect your name, email address, and the message or project details you choose to provide. Please do not include passwords, payment card data, government identification numbers, health information, or other sensitive information in a contact form submission.",
+          "We use this information to respond to your inquiry, evaluate a potential engagement, communicate with you, maintain business records, and protect our services from misuse."
+        ]
+      },
+      {
+        "heading": "Google Analytics and cookies",
+        "body": [
+          "When Google Analytics is enabled on the site, it uses cookies and similar identifiers to measure site traffic and usage. This may include pages viewed, interactions, referring pages, browser and device information, approximate location derived from IP address, and pseudonymous identifiers. We use this information to understand how the site performs and improve it.",
+          "Google Analytics commonly uses first party cookies such as _ga and _ga_<container-id>. We do not send names, email addresses, contact form messages, or other information that directly identifies you to Google Analytics. We will configure analytics to honor consent choices where consent is required by applicable law.",
+          "You can manage or delete cookies through your browser settings and can use the Google Analytics opt out browser add on. For more information about how Google handles information from sites that use its services, visit https://policies.google.com/technologies/partner-sites."
+        ]
+      },
+      {
+        "heading": "How we share information",
+        "body": [
+          "We do not sell contact form information. We share information only as needed to operate the site, respond to you, comply with law, protect rights and safety, or complete a business transaction such as a merger or asset sale.",
+          "Our service providers may include Supabase for contact message storage, Brevo for contact notification email, Google Analytics when enabled, and hosting or infrastructure providers. They may process information only as needed to provide their services to us and under their applicable terms and safeguards."
+        ]
+      },
+      {
+        "heading": "Retention and security",
+        "body": [
+          "We retain contact submissions for as long as reasonably necessary to respond, maintain business records, resolve disputes, and meet legal obligations. Analytics retention is controlled through the settings of the applicable Google Analytics property.",
+          "We use reasonable administrative, technical, and organizational safeguards designed to protect information. No system is completely secure, so we cannot guarantee absolute security."
+        ]
+      },
+      {
+        "heading": "Your choices and privacy rights",
+        "body": [
+          "Depending on where you live and subject to applicable law, you may have the right to request access to, correction of, or deletion of your personal information, or to object to or restrict certain processing. To make a request, email hello@nomadicode.com with enough information for us to verify and respond to your request.",
+          "You may decline nonessential cookies through available consent controls where presented, or manage cookies in your browser. We will not discriminate against you for exercising applicable privacy rights."
+        ]
+      },
+      {
+        "heading": "International processing, children, and links",
+        "body": [
+          "Our service providers may process information in the United States or other countries. Those countries may have privacy laws that differ from the laws where you live.",
+          "The site is not directed to children under 13, and we do not knowingly collect personal information from them. The site may link to third party websites or products. Their privacy practices are governed by their own policies."
+        ]
+      },
+      {
+        "heading": "Changes to this policy",
+        "body": [
+          "We may update this policy when our practices, technology, or legal requirements change. We will post the revised policy here and update the effective date."
+        ]
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has moved.",
+    "home": "Back to home"
+  }
+}

@@ -1,0 +1,503 @@
+{
+  "meta": {
+    "homeTitle": "Nomadicode | Agencia de desarrollo de software",
+    "homeDescription": "Nomadicode migra sistemas heredados, automatiza el trabajo manual y entrega software a medida para equipos que prefieren construir en vez de cuidar hojas de cálculo.",
+    "servicesTitle": "Servicios | Nomadicode",
+    "servicesDescription": "Migraciones de código, automatización y scripting, digitalización de procesos y desarrollo a medida.",
+    "flowdekTitle": "FlowDek | Nomadicode",
+    "flowdekDescription": "Un sistema embebido para estimados, agendamiento, notificaciones, recompensas y reseñas.",
+    "workTitle": "Proyectos | Nomadicode",
+    "workDescription": "Productos que hemos construido y sistemas que hemos modernizado, desde productos internos hasta migraciones de clientes.",
+    "pricingTitle": "Precios | Nomadicode",
+    "pricingDescription": "Desarrollo por proyecto, o FlowDek como producto embebido.",
+    "aboutTitle": "Nosotros | Nomadicode",
+    "aboutDescription": "Construimos software que sobrevive al ciclo de las tendencias.",
+    "careersTitle": "Empleo | Nomadicode",
+    "careersDescription": "Trabaja en problemas reales para negocios reales.",
+    "contactTitle": "Contacto | Nomadicode",
+    "contactDescription": "Cuéntanos en qué estás trabajando. Te responderemos dentro de un día hábil.",
+    "termsTitle": "Términos de Servicio | Nomadicode",
+    "termsDescription": "Términos de servicio para los servicios de desarrollo de software de Nomadicode.",
+    "privacyTitle": "Política de Privacidad | Nomadicode",
+    "privacyDescription": "Cómo Nomadicode recopila, utiliza y protege tu información."
+  },
+  "nav": {
+    "services": "Servicios",
+    "flowdek": "FlowDek",
+    "work": "Proyectos",
+    "pricing": "Precios",
+    "about": "Nosotros",
+    "careers": "Empleo",
+    "contact": "Contacto",
+    "bookCall": "Reservar una llamada",
+    "language": "Idioma",
+    "menu": "Menú",
+    "close": "Cerrar menú"
+  },
+  "footer": {
+    "tagline": "Software a medida para equipos que necesitan menos improvisación y menos incendios que apagar.",
+    "companyHeading": "Empresa",
+    "about": "Nosotros",
+    "careers": "Empleo",
+    "contact": "Contacto",
+    "servicesHeading": "Servicios",
+    "migrations": "Migraciones de Código",
+    "automation": "Automatización",
+    "customDev": "Desarrollo a Medida",
+    "productHeading": "Producto",
+    "legalHeading": "Legal",
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "copyright": "© 2026 Nomadicode. Todos los derechos reservados."
+  },
+  "home": {
+    "eyebrow": "Agencia de desarrollo de software",
+    "title": "Software que\nhace su parte.",
+    "description": "Modernizamos sistemas heredados, automatizamos el trabajo manual y creamos software a medida para equipos que ya superaron las hojas de cálculo, los arreglos improvisados y la única persona que sabe cómo funciona todo.",
+    "primaryCta": "Reservar una llamada",
+    "secondaryCta": "Ver nuestros proyectos",
+    "whatWeDoHeading": "Qué hacemos",
+    "allServices": "Todos los servicios",
+    "services": [
+      {
+        "title": "Migraciones de Código",
+        "description": "Migra sistemas heredados a tecnología moderna antes de que el software viejo convierta un martes normal en un incidente de producción."
+      },
+      {
+        "title": "Automatización y Scripting",
+        "description": "Scripts a medida y flujos automatizados que quitan el trabajo repetitivo de encima de tu equipo. Tu mejor gente tiene cosas más importantes que hacer."
+      },
+      {
+        "title": "Desarrollo a Medida",
+        "description": "Aplicaciones web y móviles, APIs e integraciones a medida, diseñadas según cómo opera realmente tu negocio."
+      },
+      {
+        "title": "Digitalización de Procesos",
+        "description": "Convierte hojas de cálculo, cadenas de correos y procesos manuales en sistemas de software confiables. Las hojas de cálculo por fin pueden respirar."
+      }
+    ],
+    "flowdekEyebrow": "Nuestro producto",
+    "flowdekName": "FlowDek",
+    "flowdekDescription": "Un sistema embebido para estimados, agendamiento, notificaciones y reseñas. Está hecho para negocios de servicios que prefieren atender trabajos que perseguir papeles.",
+    "flowdekCta": "Explorar FlowDek",
+    "flowdekModules": [
+      "Estimados inteligentes",
+      "Generación de cotizaciones",
+      "Agendamiento",
+      "Notificaciones",
+      "Recompensas y referidos",
+      "Reseñas"
+    ],
+    "productsHeading": "Productos",
+    "clientsHeading": "Equipos con los que trabajamos",
+    "howWeWorkHeading": "Cómo trabajamos",
+    "steps": [
+      {
+        "index": "01",
+        "title": "Descubrir",
+        "description": "Nos metemos en tus sistemas, código y flujos de trabajo para encontrar dónde está el verdadero valor. No necesitas casco."
+      },
+      {
+        "index": "02",
+        "title": "Construir",
+        "description": "Entregamos avances enfocados. Puedes verificar cada migración y automatización en tus sistemas de producción."
+      },
+      {
+        "index": "03",
+        "title": "Entregar",
+        "description": "Desplegamos con cuidado y luego entregamos documentación y soporte para que tu equipo sea dueño de lo que construimos. Sin caja misteriosa."
+      }
+    ],
+    "whyEyebrow": "Por qué trabajar con Nomadicode",
+    "whyItems": [
+      {
+        "title": "Liderazgo registrado y radicado en EE. UU.",
+        "description": "Fundada y dirigida por un desarrollador hablante nativo de inglés radicado en EE. UU. Siempre hablas directamente con la persona que hace el trabajo."
+      },
+      {
+        "title": "Equipo nearshore en crecimiento",
+        "description": "Estamos creciendo con desarrolladores colombianos verificados e hispanohablantes. Tendrás las mismas zonas horarias y tarifas más competitivas."
+      },
+      {
+        "title": "Trabajo senior, sin intermediarios",
+        "description": "Equipo pequeño y comunicación directa. Sin teléfono roto entre tú y las personas que escriben tu código."
+      }
+    ],
+    "ctaHeading": "¿Todo se sostiene con hojas de cálculo y esperanza?",
+    "ctaBody": "Muéstranos con qué estás trabajando. Te daremos un camino claro, sin circo de ventas."
+  },
+  "services": {
+    "eyebrow": "Servicios",
+    "title": "Desarrollo de principio a fin,\nsin la carga adicional.",
+    "description": "Moderniza lo que tienes. Construye lo que sigue. Mantén el negocio en movimiento mientras lo hacemos.",
+    "items": [
+      {
+        "index": "01",
+        "title": "Migraciones de Código",
+        "description": "Migrar desde un stack sin soporte, un framework antiguo o infraestructura frágil es riesgoso cuando sostiene un negocio en vivo. Planeamos cada migración y mantenemos todo funcionando durante el cambio, sin pedirle a nadie que contenga la respiración.",
+        "bullets": [
+          "Actualizaciones de lenguajes y frameworks heredados",
+          "Migraciones a la nube y cambios de plataforma",
+          "Migraciones de bases de datos con cutover sin downtime",
+          "Modernización de dependencias e infraestructura"
+        ]
+      },
+      {
+        "index": "02",
+        "title": "Automatización y Generación de Scripts",
+        "description": "Si tu equipo hace la misma tarea a mano cada semana, probablemente deba automatizarse. Creamos automatización que funciona con las herramientas que ya usas, para que tu equipo no pase el viernes copiando y pegando.",
+        "bullets": [
+          "Scripts a medida que reemplazan tareas manuales repetitivas",
+          "Automatización de flujos entre tus herramientas existentes",
+          "Herramientas internas para equipos de operaciones, finanzas y soporte",
+          "Tareas programadas, pipelines de datos e integraciones de sistemas"
+        ]
+      },
+      {
+        "index": "03",
+        "title": "Digitalización de Procesos",
+        "description": "Las hojas de cálculo y las cadenas de correos funcionan hasta que dejan de hacerlo. Convertimos procesos manuales en software confiable antes de que version_final_FINAL.xlsx se convierta en tu sistema de control.",
+        "bullets": [
+          "Convertir hojas de cálculo en aplicaciones adecuadas",
+          "Reemplazar aprobaciones por correo con flujos estructurados",
+          "Paneles internos construidos a partir de datos dispersos",
+          "Sistemas construidos para escalar más allá de lo que soporta una hoja de cálculo"
+        ]
+      },
+      {
+        "index": "04",
+        "title": "Desarrollo a Medida",
+        "description": "Cuando no existe una herramienta lista para cómo trabajas, construimos una. El software se adapta a tu flujo de trabajo real, no a una plantilla genérica que obliga a todos a improvisar.",
+        "bullets": [
+          "Aplicaciones web y móviles construidas para tu flujo de trabajo",
+          "APIs e integraciones con terceros",
+          "Herramientas internas y sistemas de administración",
+          "Soporte continuo e iteración después del lanzamiento"
+        ]
+      }
+    ],
+    "ctaHeading": "¿No sabes por dónde empezar?",
+    "ctaBody": "Envíanos la versión desordenada. Te ayudaremos a organizarla sin hacerte pasar por una presentación de ventas."
+  },
+  "flowdek": {
+    "eyebrow": "Producto de Nomadicode",
+    "title": "FlowDek",
+    "description": "Un sistema embebido para estimados, agendamiento, notificaciones, recompensas y reseñas. Se integra al flujo de trabajo que tu negocio ya usa, no al revés.",
+    "primaryCta": "Solicitar una demo",
+    "secondaryCta": "Ver qué incluye",
+    "modulesHeading": "Qué incluye",
+    "modulesDescription": "Seis módulos que funcionan juntos o de forma independiente. Usa solo lo que tu negocio necesita.",
+    "modules": [
+      {
+        "title": "Generación Inteligente de Estimados",
+        "description": "Genera estimados precisos automáticamente a partir de los detalles del trabajo, reglas de precios y datos históricos."
+      },
+      {
+        "title": "Generación de Cotizaciones",
+        "description": "Convierte estimados en cotizaciones pulidas que tus clientes pueden aprobar con un clic, antes de que el cliente se enfríe o llame al siguiente contratista."
+      },
+      {
+        "title": "Agendamiento de Citas",
+        "description": "Permite a los clientes reservar según tu disponibilidad real, sincronizada con tu calendario. Menos llamadas de ida y vuelta y menos sorpresas para el equipo."
+      },
+      {
+        "title": "Notificaciones",
+        "description": "Recordatorios y actualizaciones automatizadas por SMS y correo para mantener sincronizados a clientes y equipos, sin que alguien juegue a ser despachador todo el día."
+      },
+      {
+        "title": "Recompensas y Referidos",
+        "description": "Seguimiento de referidos e incentivos de recompensa integrados para convertir clientes satisfechos en nuevos negocios."
+      },
+      {
+        "title": "Reseñas",
+        "description": "Solicitudes de reseña automatizadas, sincronizadas con el momento en que los clientes están más satisfechos con el resultado."
+      }
+    ],
+    "whyHeading": "Por qué embebido, no independiente",
+    "whyItems": [
+      {
+        "title": "Vive dentro de tu producto",
+        "description": "Sin inicio de sesión ni app separada. FlowDek funciona dentro del software que tus clientes ya usan, para que adoptarlo no sea otro trabajo que gestionar."
+      },
+      {
+        "title": "Construido por desarrolladores, para desarrolladores",
+        "description": "APIs y documentación claras para agencias y equipos de desarrollo. Cuando un cliente diga que es un cambio pequeño, estarás listo."
+      },
+      {
+        "title": "Modular por diseño",
+        "description": "Adopta un módulo o los seis. Cada pieza es configurable de forma independiente."
+      }
+    ],
+    "ctaHeading": "Ve FlowDek en tu producto",
+    "ctaBody": "Reserva un recorrido con nuestro equipo. Te mostraremos primero las partes útiles."
+  },
+  "work": {
+    "eyebrow": "Proyectos",
+    "title": "Productos que hemos construido,\nsistemas que hemos modernizado.",
+    "description": "Una selección de los productos que hemos construido y los sistemas que hemos rescatado de demasiadas pestañas, mensajes y hojas de cálculo.",
+    "productsHeading": "Productos y proyectos",
+    "ctaHeading": "¿Tienes algo que construir?",
+    "ctaBody": "Hablemos sobre en qué estás trabajando."
+  },
+  "pricing": {
+    "eyebrow": "Precios",
+    "title": "Dos formas de trabajar con nosotros.",
+    "description": "Elige desarrollo por proyecto o FlowDek como producto embebido. Cada proyecto empieza con una llamada de alcance porque cada necesidad es distinta y no ponemos precios con una bola de cristal.",
+    "plans": [
+      {
+        "title": "Servicios de Desarrollo",
+        "subtitle": "Migraciones, automatización y desarrollo a medida",
+        "price": "Cotización a medida",
+        "priceNote": "Definido por proyecto, según complejidad y plazos",
+        "features": [
+          "Alcance fijo o proyecto continuo",
+          "Líder de proyecto dedicado",
+          "Seguimiento semanal de avance",
+          "Soporte después del lanzamiento"
+        ],
+        "ctaLabel": "Solicitar cotización",
+        "ctaHref": "contact"
+      },
+      {
+        "badge": "Producto",
+        "title": "FlowDek",
+        "subtitle": "Estimados, agendamiento y más, embebidos",
+        "price": "Desde $X/mes",
+        "priceNote": "Por módulo, según alcance de integración",
+        "features": [
+          "Elige módulos individuales o agrupados",
+          "Soporte de integración incluido",
+          "Acceso a API y documentación",
+          "Actualizaciones y soporte continuos"
+        ],
+        "ctaLabel": "Solicitar una demo",
+        "ctaHref": "flowdek"
+      }
+    ],
+    "disclaimer": "Los precios mostrados son de referencia. Confirmamos el precio final en tu llamada de alcance, después de entender lo que hay que hacer."
+  },
+  "about": {
+    "eyebrow": "Nosotros",
+    "title": "Construimos software que sobrevive al ciclo de las tendencias.",
+    "description": "Nomadicode es una agencia de desarrollo de software. Modernizamos sistemas heredados, automatizamos el trabajo manual y construimos software a medida que resuelve un problema real en vez de crear otro.",
+    "believeTitle": "En qué creemos",
+    "believeBody": "La mayoría de los problemas de software no requieren empezar de cero. Requieren entender lo que ya existe y hacer cambios cuidadosos y bien probados. Trabajamos con limitaciones reales: código heredado, procesos manuales y hojas de cálculo haciendo el trabajo de sistemas adecuados. Luego construimos algo que se sostiene, incluso cuando quien creó la hoja de cálculo está de vacaciones.",
+    "whoTitle": "Con quién trabajamos",
+    "whoBody": "Dueños de negocios pequeños y medianos que necesitan software pero no tienen un equipo interno para construirlo. Contratistas y negocios de servicios que necesitan menos caos administrativo y más tiempo para el trabajo. Desarrolladores y agencias que necesitan capacidad adicional cuando una solicitud del cliente se complica. Trabajamos como una extensión de tu equipo, no como una caja negra.",
+    "approachHeading": "Cómo abordamos un proyecto",
+    "approach": [
+      {
+        "title": "Entender antes de construir",
+        "description": "Dedicamos tiempo real a tus sistemas existentes antes de escribir una línea de código nuevo."
+      },
+      {
+        "title": "Entregar en incrementos",
+        "description": "Hitos más pequeños y verificables en vez de una gran reescritura que funciona o se convierte en una historia muy costosa."
+      },
+      {
+        "title": "Comunicar constantemente",
+        "description": "Actualizaciones regulares, sin sorpresas al final de un sprint o un contrato."
+      },
+      {
+        "title": "Entregar de forma limpia",
+        "description": "Documentación y soporte para que tu equipo sea dueño de lo que construimos."
+      }
+    ],
+    "structureTitle": "Cómo estamos estructurados",
+    "structureBody": "Nomadicode es una empresa registrada en Estados Unidos, fundada y dirigida por un desarrollador radicado en EE.UU. y hablante nativo de inglés. Por ahora, esa es la persona con la que hablarás y trabajarás directamente en cada proyecto.",
+    "growingTitle": "Hacia dónde vamos",
+    "growingBody": "Estamos construyendo un equipo nearshore con desarrolladores colombianos verificados que trabajan en las mismas zonas horarias que nuestros clientes en EE. UU. Ofrecemos comunicación directa y responsabilidad a una tarifa más competitiva, sin la carga de una gran agencia ni la incertidumbre de un contratista offshore sin supervisión.",
+    "builtHeading": "Lo que hemos construido",
+    "nexShort": "Entrega de comida para pueblos rurales de Colombia.",
+    "flowdekShort": "Estimados, agendamiento y reseñas embebidos para negocios de servicios.",
+    "ctaHeading": "Hablemos sobre lo que estás construyendo."
+  },
+  "careers": {
+    "eyebrow": "Empleo",
+    "title": "Trabaja en problemas reales para\nnegocios reales.",
+    "description": "Somos un equipo pequeño y senior. Sin capas de proceso entre tú y el código.",
+    "subDescription": "Por ahora ese equipo es una sola persona: un fundador y desarrollador principal radicado en EE.UU. y hablante nativo de inglés. Estamos construyendo un modelo de nearshoring con desarrolladores basados en Colombia.",
+    "traits": [
+      {
+        "title": "Trabajo variado",
+        "description": "Migraciones, automatización y trabajo de producto en el mismo mes, no la misma cola de tickets para siempre."
+      },
+      {
+        "title": "Contacto directo con clientes",
+        "description": "Habla con las personas que usan lo que construyes, no solo con un gerente de proyecto transmitiendo requisitos."
+      },
+      {
+        "title": "Remoto, compatible con async",
+        "description": "Trabaja desde donde quieras, con horas de coincidencia para el equipo con el que colaboras esa semana."
+      }
+    ],
+    "noRolesHeading": "Sin vacantes abiertas por ahora",
+    "noRolesBody1": "Contratamos en oleadas según llegan los proyectos. Envíanos tu perfil y te contactaremos cuando algo calce.",
+    "noRolesBody2": "Planeamos nuestras primeras contrataciones en Colombia a medida que crece la demanda. Si eres desarrollador hispanohablante allí, también nos gustaría conocerte.",
+    "ctaLabel": "Contactar"
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Cuéntanos en qué estás\ntrabajando.",
+    "description": "Ya sea una migración, una automatización, un desarrollo a medida o FlowDek, te responderemos dentro de un día hábil. Envíanos la versión desordenada. Hemos visto cosas peores.",
+    "emailLabel": "Correo",
+    "responseTimeLabel": "Tiempo de respuesta",
+    "responseTime": "Dentro de 1 día hábil",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo",
+      "emailPlaceholder": "tu@empresa.com",
+      "message": "¿Qué quieres construir?",
+      "messagePlaceholder": "Cuéntanos sobre tu proyecto. Las notas desordenadas son bienvenidas.",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando…",
+      "success": "Gracias. Te contactaremos dentro de un día hábil.",
+      "error": "Algo salió mal. Intenta de nuevo o escríbenos directamente."
+    }
+  },
+  "terms": {
+    "eyebrow": "Legal",
+    "title": "Términos de Servicio",
+    "updated": "Fecha de vigencia: 13 de septiembre de 2026",
+    "sections": [
+      {
+        "heading": "Acuerdo con estos términos",
+        "body": [
+          "Estos Términos de Servicio rigen tu uso del sitio web de Nomadicode y cualquier servicio prestado por Nomadicode LLC. Al usar el sitio o contratar nuestros servicios, aceptas estos términos. Si no estás de acuerdo, no uses el sitio ni nuestros servicios.",
+          "Nomadicode LLC es una compañía de responsabilidad limitada de un solo miembro registrada en Utah. Estos términos aplican al sitio y a los proyectos de servicios, salvo que un acuerdo escrito firmado establezca algo diferente."
+        ]
+      },
+      {
+        "heading": "Servicios y acuerdos de proyecto",
+        "body": [
+          "Cada proyecto de desarrollo se define mediante una propuesta escrita, declaración de trabajo, acuerdo marco de servicios u otro acuerdo similar aceptado por ambas partes. Ese acuerdo controla el alcance, los entregables, el cronograma, las tarifas, el calendario de pagos, los criterios de aceptación y cualquier término específico del proyecto.",
+          "Si un acuerdo de proyecto firmado entra en conflicto con estos términos, el acuerdo firmado controla ese proyecto. Podemos rechazar trabajo que esté fuera del alcance acordado hasta que las partes aprueben un cambio por escrito."
+        ]
+      },
+      {
+        "heading": "Estimaciones, tarifas y pagos",
+        "body": [
+          "Cualquier estimación, cronograma o precio mostrado en este sitio es informativo, salvo que esté incluido en un acuerdo de proyecto firmado. El costo y los tiempos reales dependen del alcance acordado, las condiciones técnicas, las dependencias de terceros y la respuesta del cliente.",
+          "Eres responsable de las tarifas, impuestos y gastos aprobados descritos en el acuerdo de proyecto aplicable. El pago tardío puede retrasar el trabajo, la entrega, el soporte o el acceso a materiales del proyecto según lo permita ese acuerdo."
+        ]
+      },
+      {
+        "heading": "Responsabilidades del cliente",
+        "body": [
+          "Eres responsable de proporcionar requisitos precisos, decisiones oportunas, acceso autorizado y todos los materiales necesarios para el trabajo. Declaras que tienes derecho a proporcionarnos cualquier contenido, dato, credencial, marca e instrucción que nos entregues.",
+          "Eres responsable de mantener copias de seguridad apropiadas y de revisar los entregables, aprobaciones y cambios en producción dentro de los plazos establecidos en el acuerdo de proyecto."
+        ]
+      },
+      {
+        "heading": "Propiedad intelectual",
+        "body": [
+          "La propiedad de los entregables se determina en el acuerdo de proyecto firmado aplicable. Salvo que ese acuerdo indique lo contrario, la propiedad se transfiere solo después de que se hayan pagado en su totalidad todos los montos debidos por el entregable correspondiente.",
+          "Nomadicode conserva la propiedad de sus herramientas, plantillas, conocimientos técnicos, librerías y métodos generales preexistentes. Podemos usarlos para prestar los servicios siempre que no divulguemos tu información confidencial. El software de terceros sigue sujeto a sus propios términos de licencia."
+        ]
+      },
+      {
+        "heading": "Confidencialidad",
+        "body": [
+          "Cada parte protegerá la información empresarial, técnica y financiera no pública de la otra parte usando un cuidado razonable y la utilizará únicamente para prestar o recibir los servicios. Esta obligación no aplica a información que sea pública sin incumplimiento, que ya se conociera sin un deber de confidencialidad, que se desarrolle de forma independiente o que se reciba legalmente de otra fuente.",
+          "Una parte puede divulgar información confidencial cuando la ley o un proceso legal lo requiera, siempre que dé aviso cuando sea legalmente permitido y coopere razonablemente para limitar la divulgación."
+        ]
+      },
+      {
+        "heading": "Uso del sitio y servicios de terceros",
+        "body": [
+          "No puedes hacer un uso indebido del sitio, interferir con su funcionamiento, intentar acceso no autorizado, introducir código malicioso ni usar el sitio en violación de la ley aplicable. El contenido del sitio pertenece a Nomadicode o a sus licenciantes y no puede copiarse, modificarse ni utilizarse sin permiso, salvo cuando la ley lo permita.",
+          "El sitio puede enlazar a sitios web, productos o servicios de terceros. No los controlamos y no somos responsables de su contenido, disponibilidad, seguridad ni prácticas de privacidad."
+        ]
+      },
+      {
+        "heading": "Exclusiones y limitación de responsabilidad",
+        "body": [
+          "El sitio se proporciona según disponibilidad. En la máxima medida permitida por la ley, Nomadicode excluye las garantías que no estén expresamente establecidas en un acuerdo de proyecto firmado, incluidas las garantías implícitas de comerciabilidad, idoneidad para un propósito particular y no infracción.",
+          "En la máxima medida permitida por la ley, Nomadicode no será responsable por daños indirectos, incidentales, especiales, consecuentes, ejemplares o punitivos, ni por pérdida de ganancias, ingresos, datos, reputación u oportunidades de negocio. Cualquier responsabilidad relacionada con un proyecto específico se rige por su acuerdo de proyecto firmado."
+        ]
+      },
+      {
+        "heading": "Terminación",
+        "body": [
+          "Cualquiera de las partes puede terminar un proyecto según lo establecido en su acuerdo de proyecto firmado. Las secciones que por su naturaleza deban sobrevivir a la terminación, incluidas las obligaciones de pago, confidencialidad, propiedad intelectual, exclusiones y limitaciones de responsabilidad, seguirán vigentes."
+        ]
+      },
+      {
+        "heading": "Ley aplicable y contacto",
+        "body": [
+          "Estos términos se rigen por las leyes del Estado de Utah, sin considerar las normas sobre conflicto de leyes. Cualquier disputa que no se resuelva informalmente se presentará ante un tribunal con jurisdicción adecuada en Utah, salvo que un acuerdo de proyecto firmado establezca un proceso diferente.",
+          "Podemos actualizar estos términos periódicamente. El uso continuado del sitio después de la fecha de vigencia de una actualización significa que aceptas los términos modificados. Puedes enviar preguntas sobre estos términos a hello@nomadicode.com."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "eyebrow": "Legal",
+    "title": "Política de Privacidad",
+    "updated": "Fecha de vigencia: 13 de septiembre de 2026",
+    "sections": [
+      {
+        "heading": "Quiénes somos y qué cubre esta política",
+        "body": [
+          "Nomadicode LLC es una compañía de responsabilidad limitada de un solo miembro registrada en Utah. Esta política explica cómo recopilamos, usamos, divulgamos, conservamos y protegemos la información relacionada con el sitio web de Nomadicode y las consultas enviadas a través de él.",
+          "Para preguntas o solicitudes de privacidad, escríbenos a hello@nomadicode.com."
+        ]
+      },
+      {
+        "heading": "Información que proporcionas",
+        "body": [
+          "Cuando usas nuestro formulario de contacto, recopilamos tu nombre, correo electrónico y el mensaje o detalles del proyecto que decidas proporcionar. No incluyas contraseñas, datos de tarjetas de pago, números de identificación gubernamental, información médica u otra información sensible en el formulario de contacto.",
+          "Usamos esta información para responder a tu consulta, evaluar una posible relación comercial, comunicarnos contigo, mantener registros empresariales y proteger nuestros servicios contra usos indebidos."
+        ]
+      },
+      {
+        "heading": "Google Analytics y cookies",
+        "body": [
+          "Cuando Google Analytics esté habilitado en el sitio, usará cookies e identificadores similares para medir el tráfico y el uso del sitio. Esto puede incluir las páginas vistas, las interacciones, las páginas de referencia, la información del navegador y del dispositivo, la ubicación aproximada derivada de la dirección IP e identificadores seudónimos. Usamos esta información para entender el rendimiento del sitio y mejorarlo.",
+          "Google Analytics suele usar cookies propias como _ga y _ga_<container-id>. No enviamos nombres, direcciones de correo, mensajes del formulario de contacto ni otra información que te identifique directamente a Google Analytics. Configuraremos la analítica para respetar las decisiones de consentimiento cuando la ley aplicable exija consentimiento.",
+          "Puedes administrar o eliminar cookies mediante la configuración de tu navegador y usar el complemento de inhabilitación de Google Analytics. Para más información sobre cómo Google maneja información de sitios que usan sus servicios, visita https://policies.google.com/technologies/partner-sites."
+        ]
+      },
+      {
+        "heading": "Cómo compartimos información",
+        "body": [
+          "No vendemos la información enviada mediante el formulario de contacto. Compartimos información solo cuando es necesario para operar el sitio, responderte, cumplir con la ley, proteger derechos y seguridad o completar una transacción comercial como una fusión o venta de activos.",
+          "Nuestros proveedores de servicios pueden incluir Supabase para almacenar mensajes de contacto, Brevo para enviar notificaciones por correo, Google Analytics cuando esté habilitado y proveedores de alojamiento o infraestructura. Pueden procesar información solo según sea necesario para prestarnos sus servicios y bajo sus términos y salvaguardas aplicables."
+        ]
+      },
+      {
+        "heading": "Conservación y seguridad",
+        "body": [
+          "Conservamos las consultas de contacto durante el tiempo razonablemente necesario para responder, mantener registros empresariales, resolver disputas y cumplir obligaciones legales. La conservación de datos analíticos se controla mediante la configuración de la propiedad de Google Analytics aplicable.",
+          "Usamos medidas administrativas, técnicas y organizativas razonables diseñadas para proteger la información. Ningún sistema es completamente seguro, por lo que no podemos garantizar seguridad absoluta."
+        ]
+      },
+      {
+        "heading": "Tus opciones y derechos de privacidad",
+        "body": [
+          "Dependiendo de dónde vivas y sujeto a la ley aplicable, puedes tener derecho a solicitar acceso, corrección o eliminación de tu información personal, o a oponerte o restringir ciertos tratamientos. Para hacer una solicitud, escribe a hello@nomadicode.com con información suficiente para que podamos verificar y responder a tu solicitud.",
+          "Puedes rechazar cookies no esenciales mediante los controles de consentimiento disponibles cuando se presenten, o administrar las cookies en tu navegador. No te discriminaremos por ejercer derechos de privacidad aplicables."
+        ]
+      },
+      {
+        "heading": "Procesamiento internacional, menores y enlaces",
+        "body": [
+          "Nuestros proveedores de servicios pueden procesar información en Estados Unidos u otros países. Esos países pueden tener leyes de privacidad diferentes a las del lugar donde vives.",
+          "El sitio no está dirigido a menores de 13 años y no recopilamos deliberadamente información personal de ellos. El sitio puede enlazar a sitios web o productos de terceros. Sus prácticas de privacidad se rigen por sus propias políticas."
+        ]
+      },
+      {
+        "heading": "Cambios a esta política",
+        "body": [
+          "Podemos actualizar esta política cuando cambien nuestras prácticas, tecnología o requisitos legales. Publicaremos la política modificada aquí y actualizaremos la fecha de vigencia."
+        ]
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe o ha sido movida.",
+    "home": "Volver al inicio"
+  }
+}
