@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import '@/app/globals.css';
 import { isLocale, locales, site, type Locale } from '@/app/lib/site';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -25,11 +26,14 @@ export default function LocaleLayout({
   children,
   params,
 }: Readonly<{ children: React.ReactNode; params: { locale: string } }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   if (!isLocale(params.locale)) notFound();
   const locale = params.locale as Locale;
   return (
     <html lang={locale} className={inter.variable}>
       <body className="bg-canvas font-sans text-ink">{children}</body>
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
 }
