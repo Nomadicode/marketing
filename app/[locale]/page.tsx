@@ -1,28 +1,19 @@
-import Link from 'next/link';
-import {
-  Code2,
-  FileSpreadsheet,
-  GitBranch,
-  Workflow,
-  ArrowRight,
-} from 'lucide-react';
-import { SiteFooter } from '@/app/components/layout/site-footer';
-import { SiteHeader } from '@/app/components/layout/site-header';
-import { Section } from '@/app/components/layout/section';
-import { PageIntro } from '@/app/components/sections/page-intro';
-import { CtaBanner } from '@/app/components/sections/cta-banner';
-import { BorderedCard } from '@/app/components/cards/bordered-card';
-import { ValueCard } from '@/app/components/cards/value-card';
-import { CatalogSection } from '@/app/components/lists/catalog-section';
-import { pageMetadata } from '@/app/lib/metadata';
-import { getMessages } from '@/app/lib/messages';
-import {
-  getPublishedClients,
-  getPublishedProducts,
-} from '@/app/services/catalog.service';
-import { isLocale, localizedPath, locales, type Locale } from '@/app/lib/site';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import { SiteFooter } from '@/app/components/layout/site-footer';
+import { SiteHeader } from '@/app/components/layout/site-header';
+import { Hero } from '@/app/components/sections/hero';
+import { MessyQuotes } from '@/app/components/sections/messy-quotes';
+import { PerspectiveSplit } from '@/app/components/sections/perspective-split';
+import { ProcessCycle } from '@/app/components/sections/process-cycle';
+import { SituationsList } from '@/app/components/sections/situations-list';
+import { CaseStudiesPreview } from '@/app/components/sections/case-studies-preview';
+import { StatementBlock } from '@/app/components/sections/statement-block';
+import { CtaBanner } from '@/app/components/sections/cta-banner';
+import { pageMetadata } from '@/app/lib/metadata';
+import { getMessages } from '@/app/lib/messages';
+import { getPublishedCaseStudies } from '@/app/services/catalog.service';
+import { isLocale, localizedPath, locales, type Locale } from '@/app/lib/site';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -45,8 +36,6 @@ export function generateMetadata({
   );
 }
 
-const serviceIcons = [GitBranch, Workflow, Code2, FileSpreadsheet];
-
 export default async function HomePage({
   params,
 }: {
@@ -56,21 +45,17 @@ export default async function HomePage({
   const locale: Locale = params.locale;
   const m = getMessages(locale);
   const h = m.home;
-  const [products, clients] = await Promise.all([
-    getPublishedProducts(),
-    getPublishedClients(),
-  ]);
-  const additionalProducts = products.filter(
-    (product) => product.slug !== 'flowdek',
-  );
+  const caseStudies = await getPublishedCaseStudies();
 
   return (
     <>
       <SiteHeader locale={locale} currentPath="" />
       <main>
-        <PageIntro
+        <Hero
           title={h.title}
+          kicker={h.kicker}
           description={h.description}
+          imageSrc="/hero-image.webp"
           actions={[
             { href: localizedPath(locale, 'contact'), label: h.primaryCta },
             {
@@ -81,120 +66,39 @@ export default async function HomePage({
           ]}
         />
 
-        <Section>
-          <div className="mx-auto max-w-shell">
-            <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
-              <h2 className="text-2xl font-bold text-ink">
-                {h.whatWeDoHeading}
-              </h2>
-              <Link
-                href={localizedPath(locale, 'services')}
-                className="flex items-center gap-1.5 text-sm font-medium text-accent"
-              >
-                {h.allServices}
-                <ArrowRight size={16} />
-              </Link>
-            </div>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {h.services.map((service, index) => {
-                const Icon = serviceIcons[index];
-                return (
-                  <BorderedCard
-                    key={service.title}
-                    icon={<Icon size={28} className="text-accent" />}
-                    title={service.title}
-                    description={service.description}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </Section>
+        <MessyQuotes
+          heading={h.messyHeading}
+          description={h.messyDescription}
+          quotes={h.messyQuotes}
+        />
 
-        <Section tone="raised" borderTop>
-          <div className="mx-auto grid max-w-shell gap-10 md:grid-cols-2 md:items-center">
-            <div>
-              <span className="mb-5 inline-block text-[13px] font-semibold uppercase tracking-wide text-accent">
-                {h.flowdekEyebrow}
-              </span>
-              <h2 className="mb-4 text-3xl font-extrabold text-ink">
-                {h.flowdekName}
-              </h2>
-              <p className="mb-6 max-w-[420px] text-[15px] leading-relaxed text-muted">
-                {h.flowdekDescription}
-              </p>
-              <Link
-                href={localizedPath(locale, 'flowdek')}
-                className="inline-flex items-center gap-1.5 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-canvas"
-              >
-                {h.flowdekCta}
-                <ArrowRight size={16} />
-              </Link>
-            </div>
-            <div className="grid grid-cols-2 gap-3 rounded-xl border border-border bg-canvas p-5">
-              {h.flowdekModules.map((module) => (
-                <div
-                  key={module}
-                  className="rounded-md border border-border-strong px-4 py-3 text-sm font-medium text-ink"
-                >
-                  {module}
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
+        <PerspectiveSplit
+          heading={h.perspectiveHeading}
+          paragraphs={h.perspectiveBody}
+          yourBusinessLabel={h.perspectiveYourBusinessLabel}
+          ourPerspectiveLabel={h.perspectiveOurLabel}
+          centerLabel={h.perspectiveCenterLabel}
+        />
 
-        {(additionalProducts.length > 0 || clients.length > 0) && (
-          <Section borderTop>
-            <div className="mx-auto flex max-w-shell flex-col gap-14">
-              <CatalogSection
-                entries={additionalProducts}
-                heading={h.productsHeading}
-                locale={locale}
-              />
-              <CatalogSection
-                entries={clients}
-                heading={h.clientsHeading}
-                locale={locale}
-              />
-            </div>
-          </Section>
-        )}
+        <ProcessCycle heading={h.processHeading} imageAlt={h.processImageAlt} />
 
-        <Section borderTop>
-          <div className="mx-auto max-w-shell">
-            <h2 className="mb-10 text-2xl font-bold text-ink">
-              {h.howWeWorkHeading}
-            </h2>
-            <div className="grid grid-cols-1 gap-9 sm:grid-cols-3">
-              {h.steps.map((step) => (
-                <ValueCard
-                  key={step.index}
-                  index={step.index}
-                  title={step.title}
-                  description={step.description}
-                />
-              ))}
-            </div>
-          </div>
-        </Section>
+        <SituationsList
+          heading={h.situationsHeading}
+          description={h.situationsDescription}
+          situations={h.situations}
+          linkLabel={h.situationsLinkLabel}
+          linkHref={localizedPath(locale, 'services')}
+        />
 
-        <Section tone="raised" borderTop borderBottom>
-          <div className="mx-auto max-w-shell">
-            <span className="mb-10 block text-center text-[13px] font-semibold uppercase tracking-wide text-accent">
-              {h.whyEyebrow}
-            </span>
-            <div className="grid grid-cols-1 gap-9 text-center sm:grid-cols-3 sm:text-left">
-              {h.whyItems.map((item) => (
-                <ValueCard
-                  key={item.title}
-                  title={item.title}
-                  description={item.description}
-                />
-              ))}
-            </div>
-          </div>
-        </Section>
+        <CaseStudiesPreview
+          heading={h.caseStudiesHeading}
+          description={h.caseStudiesDescription}
+          caseStudies={caseStudies}
+          linkLabel={h.caseStudiesLinkLabel}
+          linkHref={localizedPath(locale, 'work')}
+        />
+
+        <StatementBlock heading={h.trustHeading} body={h.trustBody} />
 
         <CtaBanner
           heading={h.ctaHeading}

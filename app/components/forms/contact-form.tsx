@@ -3,8 +3,13 @@
 import { useState } from 'react';
 import type { Messages } from '@/app/lib/messages';
 
-type FormState = { name: string; email: string; message: string };
-const initial: FormState = { name: '', email: '', message: '' };
+type FormState = {
+  name: string;
+  business: string;
+  email: string;
+  message: string;
+};
+const initial: FormState = { name: '', business: '', email: '', message: '' };
 
 export function ContactForm({
   messages,
@@ -42,21 +47,33 @@ export function ContactForm({
     <form
       onSubmit={submit}
       noValidate
-      className="rounded-xl border border-border bg-canvas-raised p-7"
+      className="flex flex-col gap-[18px] rounded-lg bg-canvas-raised p-8"
     >
-      <label className="mb-4 block text-sm">
-        <span className="mb-1.5 block text-xs text-faint">{messages.name}</span>
+      <label className="block text-sm">
+        <span className="mb-1.5 block text-sm font-semibold text-ink">
+          {messages.name}
+        </span>
         <input
           value={form.name}
           onChange={update('name')}
           required
           autoComplete="name"
-          placeholder={messages.namePlaceholder}
-          className="w-full rounded-md border border-border-strong bg-canvas px-3.5 py-2.5 text-sm text-ink placeholder:text-faint focus:border-accent focus:outline-none"
+          className="w-full rounded-md border border-border-strong bg-canvas px-3.5 py-3 text-[15px] text-ink placeholder:text-faint focus:border-accent focus:outline-none"
         />
       </label>
-      <label className="mb-4 block text-sm">
-        <span className="mb-1.5 block text-xs text-faint">
+      <label className="block text-sm">
+        <span className="mb-1.5 block text-sm font-semibold text-ink">
+          {messages.business}
+        </span>
+        <input
+          value={form.business}
+          onChange={update('business')}
+          autoComplete="organization"
+          className="w-full rounded-md border border-border-strong bg-canvas px-3.5 py-3 text-[15px] text-ink placeholder:text-faint focus:border-accent focus:outline-none"
+        />
+      </label>
+      <label className="block text-sm">
+        <span className="mb-1.5 block text-sm font-semibold text-ink">
           {messages.email}
         </span>
         <input
@@ -65,26 +82,27 @@ export function ContactForm({
           type="email"
           required
           autoComplete="email"
-          placeholder={messages.emailPlaceholder}
-          className="w-full rounded-md border border-border-strong bg-canvas px-3.5 py-2.5 text-sm text-ink placeholder:text-faint focus:border-accent focus:outline-none"
+          className="w-full rounded-md border border-border-strong bg-canvas px-3.5 py-3 text-[15px] text-ink placeholder:text-faint focus:border-accent focus:outline-none"
         />
       </label>
-      <label className="mb-5 block text-sm">
-        <span className="mb-1.5 block text-xs text-faint">
+      <label className="block text-sm">
+        <span className="mb-1.5 block text-sm font-semibold text-ink">
           {messages.message}
+        </span>
+        <span className="mb-2 block text-[13px] text-muted">
+          {messages.messageHint}
         </span>
         <textarea
           value={form.message}
           onChange={update('message')}
           required
           rows={5}
-          placeholder={messages.messagePlaceholder}
-          className="w-full resize-y rounded-md border border-border-strong bg-canvas px-3.5 py-2.5 text-sm text-ink placeholder:text-faint focus:border-accent focus:outline-none"
+          className="w-full resize-y rounded-md border border-border-strong bg-canvas px-3.5 py-3 text-[15px] text-ink placeholder:text-faint focus:border-accent focus:outline-none"
         />
       </label>
       <button
         disabled={status === 'sending'}
-        className="w-full rounded-md bg-accent px-5 py-3 text-sm font-semibold text-canvas disabled:opacity-60"
+        className="mt-1 rounded-md bg-accent px-6 py-3.5 text-base font-semibold text-accent-foreground disabled:opacity-60"
       >
         {status === 'sending' ? messages.sending : messages.submit}
       </button>
@@ -92,7 +110,7 @@ export function ContactForm({
         role="status"
         aria-live="polite"
         className={[
-          'mt-3 text-sm',
+          'text-sm',
           status === 'success'
             ? 'text-accent'
             : status === 'error'

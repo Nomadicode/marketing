@@ -6,6 +6,7 @@ import {
   type CatalogLinkType,
   type CatalogStatus,
 } from '@/app/types/catalog';
+import type { CaseStudy } from '@/app/types/case-study';
 
 type ProductRow = {
   slug: string;
@@ -58,6 +59,42 @@ function isProductRow(value: unknown): value is ProductRow {
     isCatalogIconKey(row.icon_key) &&
     isNullableString(row.icon_url) &&
     isCatalogStatus(row.status)
+  );
+}
+
+type CaseStudyRow = {
+  slug: string;
+  name: string;
+  tag: string | null;
+  blurb: string | null;
+  summary: string | null;
+  started: string | null;
+  discovered: string | null;
+  did: string | null;
+  went: string | null;
+  next_step: string | null;
+  technical: string | null;
+  image_url: string | null;
+  project_url: string | null;
+};
+
+function isCaseStudyRow(value: unknown): value is CaseStudyRow {
+  if (!value || typeof value !== 'object') return false;
+  const row = value as Record<string, unknown>;
+  return (
+    typeof row.slug === 'string' &&
+    typeof row.name === 'string' &&
+    isNullableString(row.tag) &&
+    isNullableString(row.blurb) &&
+    isNullableString(row.summary) &&
+    isNullableString(row.started) &&
+    isNullableString(row.discovered) &&
+    isNullableString(row.did) &&
+    isNullableString(row.went) &&
+    isNullableString(row.next_step) &&
+    isNullableString(row.technical) &&
+    isNullableString(row.image_url) &&
+    isNullableString(row.project_url)
   );
 }
 
@@ -146,5 +183,44 @@ export async function getPublishedClients(): Promise<CatalogEntry[]> {
     iconKey: client.icon_key,
     iconUrl: client.icon_url,
     status: 'active',
+  }));
+}
+
+export async function getPublishedCaseStudies(): Promise<CaseStudy[]> {
+  const supabase = getCatalogClient();
+  if (!supabase) return [];
+
+  const { data, error } = await supabase
+    .from('case_studies')
+    .select(
+      'slug, name, tag, blurb, summary, started, discovered, did, went, next_step, technical, image_url, project_url',
+    )
+    .eq('is_published', true)
+    .order('sort_order')
+    .order('name');
+
+  if (error) throw new Error(`Unable to load case studies: ${error.message}`);
+  if (!Array.isArray(data)) {
+    throw new Error('The case study catalog returned an invalid record.');
+  }
+  const caseStudies = data.filter(isCaseStudyRow);
+  if (caseStudies.length !== data.length) {
+    throw new Error('The case study catalog returned an invalid record.');
+  }
+
+  return caseStudies.map((caseStudy) => ({
+    slug: caseStudy.slug,
+    name: caseStudy.name,
+    tag: caseStudy.tag,
+    blurb: caseStudy.blurb,
+    summary: caseStudy.summary,
+    started: caseStudy.started,
+    discovered: caseStudy.discovered,
+    did: caseStudy.did,
+    went: caseStudy.went,
+    nextStep: caseStudy.next_step,
+    technical: caseStudy.technical,
+    imageUrl: caseStudy.image_url,
+    projectUrl: caseStudy.project_url,
   }));
 }

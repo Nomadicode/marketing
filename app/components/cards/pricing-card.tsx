@@ -33,13 +33,15 @@ export function PricingCard({
     <Card className="h-full">
       {badge && (
         <CardAction>
-          <span className="rounded bg-accent px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-canvas">
+          <span className="rounded bg-accent px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-accent-foreground">
             {badge}
           </span>
         </CardAction>
       )}
       <CardHeader className="px-8 pt-8">
-        <CardTitle className="text-lg font-bold text-ink">{title}</CardTitle>
+        <CardTitle className="font-serif text-xl font-medium text-ink">
+          {title}
+        </CardTitle>
         <CardDescription className="text-muted">{subtitle}</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-1 flex-col px-8 pb-8 pt-6">
@@ -60,7 +62,7 @@ export function PricingCard({
       <CardFooter className="px-8 pb-8 pt-0">
         <Link
           href={ctaHref}
-          className="block w-full rounded-md bg-accent px-5 py-3 text-center text-sm font-semibold text-canvas"
+          className="block w-full rounded-md bg-accent px-5 py-3 text-center text-sm font-semibold text-accent-foreground"
         >
           {ctaLabel}
         </Link>

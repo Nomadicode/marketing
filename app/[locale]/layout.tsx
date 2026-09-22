@@ -1,14 +1,29 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Caveat, Source_Sans_3, Source_Serif_4 } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import '@/app/globals.css';
 import { isLocale, locales, site, type Locale } from '@/app/lib/site';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
-const inter = Inter({
+const sourceSans = Source_Sans_3({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-inter',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-serif',
+  display: 'swap',
+});
+
+const caveat = Caveat({
+  subsets: ['latin'],
+  weight: ['500', '600'],
+  variable: '--font-hand',
   display: 'swap',
 });
 
@@ -31,7 +46,10 @@ export default function LocaleLayout({
   if (!isLocale(params.locale)) notFound();
   const locale = params.locale as Locale;
   return (
-    <html lang={locale} className={inter.variable}>
+    <html
+      lang={locale}
+      className={`${sourceSans.variable} ${sourceSerif.variable} ${caveat.variable}`}
+    >
       <body className="bg-canvas font-sans text-ink">{children}</body>
       {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>

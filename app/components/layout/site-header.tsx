@@ -5,14 +5,7 @@ import { MobileNav } from '@/app/components/layout/mobile-nav';
 import { getMessages } from '@/app/lib/messages';
 import { localizedPath, type Locale } from '@/app/lib/site';
 
-const navPaths = [
-  'services',
-  'flowdek',
-  'work',
-  'pricing',
-  'about',
-  'careers',
-] as const;
+const navPaths = ['services', 'work', 'about'] as const;
 
 export function SiteHeader({
   locale,
@@ -23,12 +16,9 @@ export function SiteHeader({
 }) {
   const m = getMessages(locale);
   const navLabels: Record<(typeof navPaths)[number], string> = {
-    services: m.nav.services,
-    flowdek: m.nav.flowdek,
-    work: m.nav.work,
-    pricing: m.nav.pricing,
+    services: m.nav.howWeHelp,
+    work: m.nav.whereWeveGone,
     about: m.nav.about,
-    careers: m.nav.careers,
   };
 
   const links = navPaths.map((path) => ({
@@ -38,7 +28,7 @@ export function SiteHeader({
   }));
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-canvas/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 bg-navy">
       <div className="mx-auto flex max-w-shell flex-wrap items-center justify-between gap-4 px-6 py-[18px] md:px-12">
         <Link
           href={localizedPath(locale)}
@@ -55,7 +45,9 @@ export function SiteHeader({
               href={link.href}
               className={[
                 'text-sm',
-                link.active ? 'font-semibold text-ink' : 'text-muted',
+                link.active
+                  ? 'font-semibold text-navy-foreground'
+                  : 'font-medium text-navy-muted hover:text-navy-foreground',
               ].join(' ')}
             >
               {link.label}
@@ -73,7 +65,7 @@ export function SiteHeader({
           </div>
           <Link
             href={localizedPath(locale, 'contact')}
-            className="hidden whitespace-nowrap rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-canvas md:inline-block"
+            className="hidden whitespace-nowrap rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground md:inline-block"
           >
             {m.nav.bookCall}
           </Link>

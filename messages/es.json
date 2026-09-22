@@ -2,191 +2,171 @@
   "meta": {
     "homeTitle": "Nomadicode | Agencia de desarrollo de software",
     "homeDescription": "Nomadicode migra sistemas heredados, automatiza el trabajo manual y entrega software a medida para equipos que prefieren construir en vez de cuidar hojas de cálculo.",
-    "servicesTitle": "Servicios | Nomadicode",
-    "servicesDescription": "Migraciones de código, automatización y scripting, digitalización de procesos y desarrollo a medida.",
+    "servicesTitle": "Cómo Ayudamos | Nomadicode",
+    "servicesDescription": "No necesitas saber si necesitas un sitio web, una integración o un sistema a medida. Empieza contándonos qué está pasando y resolvemos el resto juntos.",
     "flowdekTitle": "FlowDek | Nomadicode",
     "flowdekDescription": "Un sistema embebido para estimados, agendamiento, notificaciones, recompensas y reseñas.",
-    "workTitle": "Proyectos | Nomadicode",
-    "workDescription": "Productos que hemos construido y sistemas que hemos modernizado, desde productos internos hasta migraciones de clientes.",
+    "workTitle": "A Dónde Hemos Llegado | Nomadicode",
+    "workDescription": "Todo proyecto empieza en algún lugar. Un vistazo a algunos de los lugares a los que el software nos ha llevado, junto a la gente con la que trabajamos.",
     "pricingTitle": "Precios | Nomadicode",
     "pricingDescription": "Desarrollo por proyecto, o FlowDek como producto embebido.",
     "aboutTitle": "Nosotros | Nomadicode",
-    "aboutDescription": "Construimos software que sobrevive al ciclo de las tendencias.",
+    "aboutDescription": "Nomadicode nació de una idea simple: el software debe llevarte a algún lugar. Conoce quiénes somos y cómo abordamos un proyecto.",
     "careersTitle": "Empleo | Nomadicode",
     "careersDescription": "Trabaja en problemas reales para negocios reales.",
-    "contactTitle": "Contacto | Nomadicode",
-    "contactDescription": "Cuéntanos en qué estás trabajando. Te responderemos dentro de un día hábil.",
+    "contactTitle": "Hablemos | Nomadicode",
+    "contactDescription": "Sin discurso de ventas. Sin tarea. Tráenos una idea, un problema o algo repetitivo y lo conversamos.",
     "termsTitle": "Términos de Servicio | Nomadicode",
     "termsDescription": "Términos de servicio para los servicios de desarrollo de software de Nomadicode.",
     "privacyTitle": "Política de Privacidad | Nomadicode",
     "privacyDescription": "Cómo Nomadicode recopila, utiliza y protege tu información."
   },
   "nav": {
-    "services": "Servicios",
+    "howWeHelp": "Cómo ayudamos",
+    "whereWeveGone": "A dónde hemos llegado",
     "flowdek": "FlowDek",
-    "work": "Proyectos",
     "pricing": "Precios",
     "about": "Nosotros",
     "careers": "Empleo",
     "contact": "Contacto",
-    "bookCall": "Reservar una llamada",
+    "bookCall": "Hablemos",
     "language": "Idioma",
     "menu": "Menú",
     "close": "Cerrar menú"
   },
   "footer": {
-    "tagline": "Software a medida para equipos que necesitan menos improvisación y menos incendios que apagar.",
-    "companyHeading": "Empresa",
-    "about": "Nosotros",
-    "careers": "Empleo",
-    "contact": "Contacto",
-    "servicesHeading": "Servicios",
-    "migrations": "Migraciones de Código",
-    "automation": "Automatización",
-    "customDev": "Desarrollo a Medida",
-    "productHeading": "Producto",
-    "legalHeading": "Legal",
+    "tagline": "Software que te lleva a nuevos lugares.",
     "terms": "Términos",
     "privacy": "Privacidad",
     "copyright": "© 2026 Nomadicode. Todos los derechos reservados."
   },
   "home": {
-    "eyebrow": "Agencia de desarrollo de software",
-    "title": "Software que\nhace su parte.",
-    "description": "Modernizamos sistemas heredados, automatizamos el trabajo manual y creamos software a medida para equipos que ya superaron las hojas de cálculo, los arreglos improvisados y la única persona que sabe cómo funciona todo.",
-    "primaryCta": "Reservar una llamada",
-    "secondaryCta": "Ver nuestros proyectos",
-    "whatWeDoHeading": "Qué hacemos",
-    "allServices": "Todos los servicios",
-    "services": [
+    "title": "Software que te lleva a nuevos lugares.",
+    "kicker": "¿A dónde quieres llegar?",
+    "description": "Muéstranos qué se está interponiendo. No necesitas llegar con una respuesta técnica.",
+    "primaryCta": "Hablemos de tu negocio",
+    "secondaryCta": "Ve a dónde hemos llegado",
+    "messyHeading": "Tráenos la versión desordenada.",
+    "messyDescription": "No necesitas conocer la solución antes de hablar con nosotros. Solo necesitas saber que algo no anda del todo bien.",
+    "messyQuotes": [
       {
-        "title": "Migraciones de Código",
-        "description": "Migra sistemas heredados a tecnología moderna antes de que el software viejo convierta un martes normal en un incidente de producción."
+        "text": "Dedico todos los viernes a esto."
       },
       {
-        "title": "Automatización y Scripting",
-        "description": "Scripts a medida y flujos automatizados que quitan el trabajo repetitivo de encima de tu equipo. Tu mejor gente tiene cosas más importantes que hacer."
+        "text": "Nuestros clientes siempre nos llaman por esto.",
+        "note": "esta la escuchamos seguido"
       },
       {
-        "title": "Desarrollo a Medida",
-        "description": "Aplicaciones web y móviles, APIs e integraciones a medida, diseñadas según cómo opera realmente tu negocio."
+        "text": "Tengo una idea, pero no sé si es posible."
       },
       {
-        "title": "Digitalización de Procesos",
-        "description": "Convierte hojas de cálculo, cadenas de correos y procesos manuales en sistemas de software confiables. Las hojas de cálculo por fin pueden respirar."
+        "text": "Siempre lo hemos hecho así."
+      },
+      {
+        "text": "Nuestro sitio web en realidad no hace nada."
+      },
+      {
+        "text": "Copiamos la misma información en tres lugares distintos.",
+        "note": "version_final_FINAL.xlsx"
       }
     ],
-    "flowdekEyebrow": "Nuestro producto",
-    "flowdekName": "FlowDek",
-    "flowdekDescription": "Un sistema embebido para estimados, agendamiento, notificaciones y reseñas. Está hecho para negocios de servicios que prefieren atender trabajos que perseguir papeles.",
-    "flowdekCta": "Explorar FlowDek",
-    "flowdekModules": [
-      "Estimados inteligentes",
-      "Generación de cotizaciones",
-      "Agendamiento",
-      "Notificaciones",
-      "Recompensas y referidos",
-      "Reseñas"
+    "perspectiveHeading": "Tú conoces tu negocio. Nosotros aportamos otra mirada.",
+    "perspectiveBody": [
+      "Conoces los detalles de cómo funciona tu negocio. Nosotros escuchamos, hacemos buenas preguntas y sabemos construir.",
+      "Las mejores oportunidades suelen aparecer en la conversación. A menudo alguien pregunta: \"espera, si tuviéramos eso, ¿no podríamos también…?\""
     ],
-    "productsHeading": "Productos",
-    "clientsHeading": "Equipos con los que trabajamos",
-    "howWeWorkHeading": "Cómo trabajamos",
-    "steps": [
+    "perspectiveYourBusinessLabel": "Tu negocio",
+    "perspectiveOurLabel": "Nuestra mirada",
+    "perspectiveCenterLabel": "lo que se vuelve posible",
+    "processHeading": "Cómo trabajamos",
+    "processImageAlt": "El trabajo pasa de escuchar a construir y aprender. Luego vuelve atrás cuando hay más por entender.",
+    "situationsHeading": "¿Por dónde empezamos?",
+    "situationsDescription": "Empieza por lo que realmente está pasando, no por lo que crees que necesitas.",
+    "situations": [
       {
-        "index": "01",
-        "title": "Descubrir",
-        "description": "Nos metemos en tus sistemas, código y flujos de trabajo para encontrar dónde está el verdadero valor. No necesitas casco."
+        "title": "Tengo una idea.",
+        "response": "Explorémosla.",
+        "annotation": "no tiene que estar completamente definida"
       },
       {
-        "index": "02",
-        "title": "Construir",
-        "description": "Entregamos avances enfocados. Puedes verificar cada migración y automatización en tus sistemas de producción."
+        "title": "Esto toma demasiado tiempo.",
+        "response": "Muéstranos cómo lo haces ahora."
       },
       {
-        "index": "03",
-        "title": "Entregar",
-        "description": "Desplegamos con cuidado y luego entregamos documentación y soporte para que tu equipo sea dueño de lo que construimos. Sin caja misteriosa."
+        "title": "Nuestro sistema actual ya no funciona.",
+        "response": "Entendamos por qué antes de reemplazarlo.",
+        "annotation": "antes de reemplazarlo... ¿por qué?"
+      },
+      {
+        "title": "Necesitamos una mejor forma de llegar a nuestros clientes.",
+        "response": "Veamos la experiencia completa."
+      },
+      {
+        "title": "Sinceramente, no estoy seguro.",
+        "response": "También está bien.",
+        "annotation": "honestamente, este es interesante"
       }
     ],
-    "whyEyebrow": "Por qué trabajar con Nomadicode",
-    "whyItems": [
-      {
-        "title": "Liderazgo registrado y radicado en EE. UU.",
-        "description": "Fundada y dirigida por un desarrollador hablante nativo de inglés radicado en EE. UU. Siempre hablas directamente con la persona que hace el trabajo."
-      },
-      {
-        "title": "Equipo nearshore en crecimiento",
-        "description": "Estamos creciendo con desarrolladores colombianos verificados e hispanohablantes. Tendrás las mismas zonas horarias y tarifas más competitivas."
-      },
-      {
-        "title": "Trabajo senior, sin intermediarios",
-        "description": "Equipo pequeño y comunicación directa. Sin teléfono roto entre tú y las personas que escriben tu código."
-      }
-    ],
-    "ctaHeading": "¿Todo se sostiene con hojas de cálculo y esperanza?",
-    "ctaBody": "Muéstranos con qué estás trabajando. Te daremos un camino claro, sin circo de ventas."
+    "situationsLinkLabel": "Mira cómo pensamos esto →",
+    "caseStudiesHeading": "A dónde hemos llegado",
+    "caseStudiesDescription": "Todo proyecto empieza en algún lugar. Aquí hay algunos lugares a los que el software nos ha llevado, junto con la gente con la que hemos trabajado.",
+    "caseStudiesLinkLabel": "Ve todo a dónde hemos llegado →",
+    "trustHeading": "A veces la respuesta correcta es dejarlo tal como está.",
+    "trustBody": "Si tu sistema actual funciona, te lo diremos. Si una herramienta existente hace el trabajo, te la recomendaremos. Solo construimos cuando vale la pena construir.",
+    "ctaHeading": "Hablemos de tu negocio.",
+    "ctaBody": [
+      "Sin discurso de ventas. Sin tarea. No necesitas saber qué necesitas todavía.",
+      "Cuéntanos qué tienes en mente. Lo conversamos y te damos una opinión honesta."
+    ]
   },
   "services": {
-    "eyebrow": "Servicios",
-    "title": "Desarrollo de principio a fin,\nsin la carga adicional.",
-    "description": "Moderniza lo que tienes. Construye lo que sigue. Mantén el negocio en movimiento mientras lo hacemos.",
-    "items": [
+    "title": "Cómo ayudamos",
+    "description": "Puede que todavía no sepas qué ayudaría. Empieza por contarnos qué está pasando y juntos vemos el siguiente paso.",
+    "situations": [
       {
-        "index": "01",
-        "title": "Migraciones de Código",
-        "description": "Migrar desde un stack sin soporte, un framework antiguo o infraestructura frágil es riesgoso cuando sostiene un negocio en vivo. Planeamos cada migración y mantenemos todo funcionando durante el cambio, sin pedirle a nadie que contenga la respiración.",
-        "bullets": [
-          "Actualizaciones de lenguajes y frameworks heredados",
-          "Migraciones a la nube y cambios de plataforma",
-          "Migraciones de bases de datos con cutover sin downtime",
-          "Modernización de dependencias e infraestructura"
-        ]
+        "title": "Tengo una idea.",
+        "detail": "Tal vez no estés seguro de si es posible, o si vale la pena todavía. Cuéntanos y te ayudamos a entender qué haría falta realmente."
       },
       {
-        "index": "02",
-        "title": "Automatización y Generación de Scripts",
-        "description": "Si tu equipo hace la misma tarea a mano cada semana, probablemente deba automatizarse. Creamos automatización que funciona con las herramientas que ya usas, para que tu equipo no pase el viernes copiando y pegando.",
-        "bullets": [
-          "Scripts a medida que reemplazan tareas manuales repetitivas",
-          "Automatización de flujos entre tus herramientas existentes",
-          "Herramientas internas para equipos de operaciones, finanzas y soporte",
-          "Tareas programadas, pipelines de datos e integraciones de sistemas"
-        ]
+        "title": "Esto toma demasiado tiempo.",
+        "detail": "Muéstranos cómo lo haces ahora, paso a paso. A veces la solución es pequeña. A veces abre algo más grande."
       },
       {
-        "index": "03",
-        "title": "Digitalización de Procesos",
-        "description": "Las hojas de cálculo y las cadenas de correos funcionan hasta que dejan de hacerlo. Convertimos procesos manuales en software confiable antes de que version_final_FINAL.xlsx se convierta en tu sistema de control.",
-        "bullets": [
-          "Convertir hojas de cálculo en aplicaciones adecuadas",
-          "Reemplazar aprobaciones por correo con flujos estructurados",
-          "Paneles internos construidos a partir de datos dispersos",
-          "Sistemas construidos para escalar más allá de lo que soporta una hoja de cálculo"
-        ]
+        "title": "Nuestro sistema actual ya no funciona.",
+        "detail": "Antes de hablar de reemplazar algo, queremos entender qué está haciendo realmente y por qué dejó de funcionar."
       },
       {
-        "index": "04",
-        "title": "Desarrollo a Medida",
-        "description": "Cuando no existe una herramienta lista para cómo trabajas, construimos una. El software se adapta a tu flujo de trabajo real, no a una plantilla genérica que obliga a todos a improvisar.",
-        "bullets": [
-          "Aplicaciones web y móviles construidas para tu flujo de trabajo",
-          "APIs e integraciones con terceros",
-          "Herramientas internas y sistemas de administración",
-          "Soporte continuo e iteración después del lanzamiento"
-        ]
+        "title": "Necesitamos una mejor forma de llegar a nuestros clientes.",
+        "detail": "Miraremos toda la experiencia, no solo la parte que se ve rota."
+      },
+      {
+        "title": "La verdad, no estoy seguro.",
+        "detail": "Es un buen punto de partida. Haremos preguntas hasta que algo se aclare."
       }
     ],
-    "ctaHeading": "¿No sabes por dónde empezar?",
-    "ctaBody": "Envíanos la versión desordenada. Te ayudaremos a organizarla sin hacerte pasar por una presentación de ventas."
+    "toolsHeading": "Una vez que sabemos qué está pasando realmente, esto es lo que solemos usar.",
+    "toolsDescription": "Son opciones, no una lista obligatoria. Usamos lo que ayuda y dejamos las demás por fuera.",
+    "tools": [
+      "Sitios web",
+      "Automatización",
+      "Integraciones",
+      "Software a medida",
+      "IA",
+      "Modernizar sistemas antiguos",
+      "Cambios de proceso",
+      "A veces, solo una herramienta de $30 que ya existe"
+    ],
+    "ctaHeading": "¿No sabes cuál de estas eres tú? Nosotros tampoco al principio."
   },
   "flowdek": {
     "eyebrow": "Producto de Nomadicode",
+    "kicker": "Un solo sistema, menos pestañas.",
     "title": "FlowDek",
-    "description": "Un sistema embebido para estimados, agendamiento, notificaciones, recompensas y reseñas. Se integra al flujo de trabajo que tu negocio ya usa, no al revés.",
+    "description": "FlowDek reúne estimados, agendamiento y seguimiento de clientes dentro de la forma en que tu negocio ya trabaja.",
     "primaryCta": "Solicitar una demo",
     "secondaryCta": "Ver qué incluye",
     "modulesHeading": "Qué incluye",
-    "modulesDescription": "Seis módulos que funcionan juntos o de forma independiente. Usa solo lo que tu negocio necesita.",
+    "modulesDescription": "Usa las partes que le sirvan a tu negocio. Deja fuera las demás.",
     "modules": [
       {
         "title": "Generación Inteligente de Estimados",
@@ -232,15 +212,23 @@
     "ctaBody": "Reserva un recorrido con nuestro equipo. Te mostraremos primero las partes útiles."
   },
   "work": {
-    "eyebrow": "Proyectos",
-    "title": "Productos que hemos construido,\nsistemas que hemos modernizado.",
-    "description": "Una selección de los productos que hemos construido y los sistemas que hemos rescatado de demasiadas pestañas, mensajes y hojas de cálculo.",
-    "productsHeading": "Productos y proyectos",
-    "ctaHeading": "¿Tienes algo que construir?",
-    "ctaBody": "Hablemos sobre en qué estás trabajando."
+    "title": "A dónde hemos llegado",
+    "description": "Todo proyecto empieza en algún lugar. Aquí hay algunos de los lugares a los que el software nos ha llevado, junto a la gente con la que hemos trabajado.",
+    "annotation": "no es un portafolio",
+    "caseStudyLabels": {
+      "started": "Dónde empezamos",
+      "discovered": "Qué descubrimos",
+      "did": "Qué hicimos",
+      "went": "A dónde llegó",
+      "next": "Qué sigue",
+      "nextCaption": "una posibilidad, todavía no un plan",
+      "technical": "Para los técnicamente curiosos"
+    },
+    "ctaHeading": "¿Te preguntas a dónde podría llegar tu proyecto?"
   },
   "pricing": {
     "eyebrow": "Precios",
+    "kicker": "No usamos bola de cristal.",
     "title": "Dos formas de trabajar con nosotros.",
     "description": "Elige desarrollo por proyecto o FlowDek como producto embebido. Cada proyecto empieza con una llamada de alcance porque cada necesidad es distinta y no ponemos precios con una bola de cristal.",
     "plans": [
@@ -277,50 +265,42 @@
     "disclaimer": "Los precios mostrados son de referencia. Confirmamos el precio final en tu llamada de alcance, después de entender lo que hay que hacer."
   },
   "about": {
-    "eyebrow": "Nosotros",
-    "title": "Construimos software que sobrevive al ciclo de las tendencias.",
-    "description": "Nomadicode es una agencia de desarrollo de software. Modernizamos sistemas heredados, automatizamos el trabajo manual y construimos software a medida que resuelve un problema real en vez de crear otro.",
-    "believeTitle": "En qué creemos",
-    "believeBody": "La mayoría de los problemas de software no requieren empezar de cero. Requieren entender lo que ya existe y hacer cambios cuidadosos y bien probados. Trabajamos con limitaciones reales: código heredado, procesos manuales y hojas de cálculo haciendo el trabajo de sistemas adecuados. Luego construimos algo que se sostiene, incluso cuando quien creó la hoja de cálculo está de vacaciones.",
-    "whoTitle": "Con quién trabajamos",
-    "whoBody": "Dueños de negocios pequeños y medianos que necesitan software pero no tienen un equipo interno para construirlo. Contratistas y negocios de servicios que necesitan menos caos administrativo y más tiempo para el trabajo. Desarrolladores y agencias que necesitan capacidad adicional cuando una solicitud del cliente se complica. Trabajamos como una extensión de tu equipo, no como una caja negra.",
-    "approachHeading": "Cómo abordamos un proyecto",
-    "approach": [
-      {
-        "title": "Entender antes de construir",
-        "description": "Dedicamos tiempo real a tus sistemas existentes antes de escribir una línea de código nuevo."
-      },
-      {
-        "title": "Entregar en incrementos",
-        "description": "Hitos más pequeños y verificables en vez de una gran reescritura que funciona o se convierte en una historia muy costosa."
-      },
-      {
-        "title": "Comunicar constantemente",
-        "description": "Actualizaciones regulares, sin sorpresas al final de un sprint o un contrato."
-      },
-      {
-        "title": "Entregar de forma limpia",
-        "description": "Documentación y soporte para que tu equipo sea dueño de lo que construimos."
-      }
+    "title": "Sobre Nomadicode",
+    "description": "Nomadicode nació de una idea simple: el software debe llevarte a algún lugar útil. Puede ser una mejor forma de trabajar o una nueva forma de atender a tus clientes.",
+    "notJustTitle": "No somos solo ingenieros que contratas.",
+    "notJustBody": [
+      "La mayoría de las empresas de software esperan una especificación. Nosotros preferimos escuchar sobre tu negocio y hacer preguntas, incluso las que al principio parecen no tener relación.",
+      "Ahí suele surgir el trabajo más interesante. Entramos a algo desordenado o desconocido, nos volvemos genuinamente expertos en ello y buscamos qué es posible una vez que lo entendemos."
     ],
-    "structureTitle": "Cómo estamos estructurados",
-    "structureBody": "Nomadicode es una empresa registrada en Estados Unidos, fundada y dirigida por un desarrollador radicado en EE.UU. y hablante nativo de inglés. Por ahora, esa es la persona con la que hablarás y trabajarás directamente en cada proyecto.",
-    "growingTitle": "Hacia dónde vamos",
-    "growingBody": "Estamos construyendo un equipo nearshore con desarrolladores colombianos verificados que trabajan en las mismas zonas horarias que nuestros clientes en EE. UU. Ofrecemos comunicación directa y responsabilidad a una tarifa más competitiva, sin la carga de una gran agencia ni la incertidumbre de un contratista offshore sin supervisión.",
-    "builtHeading": "Lo que hemos construido",
-    "nexShort": "Entrega de comida para pueblos rurales de Colombia.",
-    "flowdekShort": "Estimados, agendamiento y reseñas embebidos para negocios de servicios.",
-    "ctaHeading": "Hablemos sobre lo que estás construyendo."
+    "whoWeAreTitle": "Quiénes somos",
+    "whoWeAreBody": [
+      "Nomadicode es un equipo basado en Utah y Colombia. Trabajamos de cerca, mantenemos la curiosidad y tomamos en serio el problema que tenemos enfrente.",
+      "Trabajar entre dos países ha moldeado cómo pensamos. Nos mantiene haciendo preguntas en vez de asumir que ya sabemos la respuesta."
+    ],
+    "wontDoTitle": "Lo que no haremos",
+    "wontDoBody": [
+      "No vamos a inventar un problema para cerrar una venta. Si tu sistema actual funciona, te lo diremos. Si un producto de 30 dólares lo resuelve mejor que cualquier cosa que construyamos, te lo señalaremos.",
+      "El objetivo es hacer algo mejor. A veces eso significa construir software. A veces no."
+    ],
+    "technicalTitle": "Del lado técnico",
+    "technicalBody": [
+      "Detrás de la conversación hay un equipo de ingeniería completo. Construimos software nuevo, mejoramos sistemas existentes y podemos trabajar con un código ya hecho."
+    ],
+    "technicalNotePrefix": "Si quieres profundizar en el lado técnico de un proyecto específico, los casos de estudio en",
+    "technicalNoteLinkLabel": "A Dónde Hemos Llegado",
+    "technicalNoteSuffix": " incluyen notas para los técnicamente curiosos.",
+    "ctaHeading": "¿Quieres ver si encajamos?"
   },
   "careers": {
     "eyebrow": "Empleo",
+    "kicker": "Ven a construir lo aburrido, y lo divertido.",
     "title": "Trabaja en problemas reales para\nnegocios reales.",
-    "description": "Somos un equipo pequeño y senior. Sin capas de proceso entre tú y el código.",
-    "subDescription": "Por ahora ese equipo es una sola persona: un fundador y desarrollador principal radicado en EE.UU. y hablante nativo de inglés. Estamos construyendo un modelo de nearshoring con desarrolladores basados en Colombia.",
+    "description": "Somos un equipo senior y pequeño. Estarás cerca del código y de las personas que lo usan.",
+    "subDescription": "Hoy Nomadicode está dirigido por un fundador y desarrollador principal radicado en Estados Unidos. Estamos haciendo crecer el equipo en Colombia según lo requiera el trabajo.",
     "traits": [
       {
         "title": "Trabajo variado",
-        "description": "Migraciones, automatización y trabajo de producto en el mismo mes, no la misma cola de tickets para siempre."
+        "description": "El trabajo cambia. Un mes puede ser una migración y el siguiente una función de producto."
       },
       {
         "title": "Contacto directo con clientes",
@@ -337,20 +317,19 @@
     "ctaLabel": "Contactar"
   },
   "contact": {
-    "eyebrow": "Contacto",
-    "title": "Cuéntanos en qué estás\ntrabajando.",
-    "description": "Ya sea una migración, una automatización, un desarrollo a medida o FlowDek, te responderemos dentro de un día hábil. Envíanos la versión desordenada. Hemos visto cosas peores.",
-    "emailLabel": "Correo",
-    "responseTimeLabel": "Tiempo de respuesta",
-    "responseTime": "Dentro de 1 día hábil",
+    "title": "Hablemos sobre tu negocio.",
+    "body": [
+      "Sin discurso de ventas. Sin tarea. No necesitas saber qué necesitas todavía.",
+      "Cuéntanos qué tienes en mente. Haremos preguntas, te daremos una opinión honesta y te enviaremos un resumen corto después de la llamada."
+    ],
+    "duration": "Calcula unos 30 minutos.",
     "form": {
       "name": "Nombre",
-      "namePlaceholder": "Tu nombre",
-      "email": "Correo",
-      "emailPlaceholder": "tu@empresa.com",
-      "message": "¿Qué quieres construir?",
-      "messagePlaceholder": "Cuéntanos sobre tu proyecto. Las notas desordenadas son bienvenidas.",
-      "submit": "Enviar mensaje",
+      "business": "Negocio / organización",
+      "email": "Correo o contacto preferido",
+      "message": "¿De qué quieres hablar?",
+      "messageHint": "Cuéntanos qué tienes en mente. La versión desordenada es suficiente.",
+      "submit": "Enviarlo",
       "sending": "Enviando…",
       "success": "Gracias. Te contactaremos dentro de un día hábil.",
       "error": "Algo salió mal. Intenta de nuevo o escríbenos directamente."

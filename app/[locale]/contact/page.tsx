@@ -6,7 +6,7 @@ import { Section } from '@/app/components/layout/section';
 import { ContactForm } from '@/app/components/forms/contact-form';
 import { pageMetadata } from '@/app/lib/metadata';
 import { getMessages } from '@/app/lib/messages';
-import { isLocale, locales, site, type Locale } from '@/app/lib/site';
+import { isLocale, locales, type Locale } from '@/app/lib/site';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -41,38 +41,27 @@ export default function ContactPage({
     <>
       <SiteHeader locale={locale} currentPath="contact" />
       <main>
-        <Section grid className="pb-16 pt-24 md:pb-20 md:pt-28">
-          <div className="mx-auto grid max-w-shell gap-14 md:grid-cols-2">
+        <Section tone="base" className="pb-[100px] pt-[90px]">
+          <div className="mx-auto grid max-w-[980px] items-start gap-16 md:grid-cols-2">
             <div>
-              <span className="mb-5 inline-block text-[13px] font-semibold uppercase tracking-wide text-accent">
-                {c.eyebrow}
-              </span>
-              <h1 className="mb-5 whitespace-pre-line text-[clamp(32px,5vw,44px)] font-extrabold leading-[1.1] tracking-tight text-ink">
+              <h1 className="mb-5 text-[clamp(30px,4.2vw,44px)] font-medium text-ink">
                 {c.title}
               </h1>
-              <p className="mb-10 max-w-[420px] text-[15px] leading-relaxed text-muted">
-                {c.description}
-              </p>
-              <div className="space-y-6">
-                <div>
-                  <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-faint">
-                    {c.emailLabel}
-                  </div>
-                  <a
-                    href={`mailto:${site.email}`}
-                    className="text-sm text-ink underline decoration-border-strong underline-offset-4"
-                  >
-                    {site.email}
-                  </a>
-                </div>
-                <div>
-                  <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-faint">
-                    {c.responseTimeLabel}
-                  </div>
-                  <div className="text-sm text-ink">{c.responseTime}</div>
-                </div>
-              </div>
+              {c.body.map((paragraph, index) => (
+                <p
+                  key={paragraph}
+                  className={[
+                    'text-[16px] text-muted',
+                    index === 0 ? 'text-[17px]' : '',
+                    index === c.body.length - 1 ? 'mb-0' : 'mb-4',
+                  ].join(' ')}
+                >
+                  {paragraph}
+                </p>
+              ))}
+              <p className="mt-4 text-[15px] text-faint">{c.duration}</p>
             </div>
+
             <ContactForm messages={c.form} />
           </div>
         </Section>

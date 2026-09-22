@@ -15,7 +15,7 @@ export function LanguageSelect({
   return (
     <div
       aria-label={label}
-      className="flex items-center gap-0.5 rounded-md border border-border-strong p-0.5"
+      className="flex items-center gap-0.5 rounded-md border border-navy-border p-0.5"
     >
       {locales.map((candidate) => {
         const href =
@@ -30,7 +30,9 @@ export function LanguageSelect({
             aria-current={isActive ? 'true' : undefined}
             className={[
               'rounded px-2 py-1 text-xs font-bold',
-              isActive ? 'bg-accent text-canvas' : 'text-muted hover:text-ink',
+              isActive
+                ? 'bg-accent text-accent-foreground'
+                : 'text-navy-muted hover:text-navy-foreground',
             ].join(' ')}
           >
             {labels[candidate]}

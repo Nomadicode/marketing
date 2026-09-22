@@ -2,13 +2,12 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { SiteFooter } from '@/app/components/layout/site-footer';
 import { SiteHeader } from '@/app/components/layout/site-header';
-import { Section } from '@/app/components/layout/section';
-import { PageIntro } from '@/app/components/sections/page-intro';
+import { PageHero } from '@/app/components/sections/page-hero';
+import { CaseStudyDetail } from '@/app/components/sections/case-study-detail';
 import { CtaBanner } from '@/app/components/sections/cta-banner';
-import { CatalogSection } from '@/app/components/lists/catalog-section';
 import { pageMetadata } from '@/app/lib/metadata';
 import { getMessages } from '@/app/lib/messages';
-import { getPublishedProducts } from '@/app/services/catalog.service';
+import { getPublishedCaseStudies } from '@/app/services/catalog.service';
 import { isLocale, localizedPath, locales, type Locale } from '@/app/lib/site';
 
 export function generateStaticParams() {
@@ -41,32 +40,23 @@ export default async function WorkPage({
   const locale: Locale = params.locale;
   const m = getMessages(locale);
   const w = m.work;
-  const products = await getPublishedProducts();
+  const caseStudies = await getPublishedCaseStudies();
 
   return (
     <>
       <SiteHeader locale={locale} currentPath="work" />
       <main>
-        <PageIntro
-          eyebrow={w.eyebrow}
+        <PageHero
           title={w.title}
           description={w.description}
+          annotation={w.annotation}
         />
-        {products.length > 0 && (
-          <Section>
-            <div className="mx-auto max-w-shell">
-              <CatalogSection
-                entries={products}
-                heading={w.productsHeading}
-                locale={locale}
-              />
-            </div>
-          </Section>
-        )}
+
+        <CaseStudyDetail caseStudies={caseStudies} labels={w.caseStudyLabels} />
+
         <CtaBanner
           heading={w.ctaHeading}
-          body={w.ctaBody}
-          actionLabel={m.home.primaryCta}
+          actionLabel={m.nav.bookCall}
           actionHref={localizedPath(locale, 'contact')}
         />
       </main>

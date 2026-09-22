@@ -19,7 +19,7 @@ export default function NotFound({ params }: { params?: { locale?: string } }) {
         <p className="mb-8 text-muted">{m.notFound.description}</p>
         <Link
           href={localizedPath(locale)}
-          className="inline-block rounded-md bg-accent px-6 py-3 text-sm font-semibold text-canvas"
+          className="inline-block rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground"
         >
           {m.notFound.home}
         </Link>
