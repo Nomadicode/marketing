@@ -108,7 +108,7 @@ export function CaseStudyDetail({
                 <h3 className="mb-2 text-[14px] font-semibold uppercase tracking-wide text-accent">
                   {labels.next}{' '}
                   <span className="font-serif text-[15px] font-normal italic normal-case tracking-normal text-faint">
-                    — {labels.nextCaption}
+                    : {labels.nextCaption}
                   </span>
                 </h3>
                 <p className="text-[15px] text-ink/85">{caseStudy.nextStep}</p>

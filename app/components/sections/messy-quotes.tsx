@@ -45,7 +45,7 @@ export function MessyQuotes({
                 &ldquo;{quote.text}&rdquo;
               </p>
               {quote.note && (
-                <p className="mt-2 text-[13px] italic text-highlight">
+                <p className="mt-2 font-hand text-[19px] leading-none text-highlight">
                   {quote.note}
                 </p>
               )}

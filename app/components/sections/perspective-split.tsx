@@ -36,7 +36,7 @@ export function PerspectiveSplit({
         <div className="relative h-[300px]">
           <Image
             src="/split-diagram.webp"
-            alt={`${yourBusinessLabel} / ${ourPerspectiveLabel} — ${centerLabel}`}
+            alt={`${yourBusinessLabel} + ${ourPerspectiveLabel}: ${centerLabel}`}
             width={500}
             height={500}
             className="h-full w-full object-contain"

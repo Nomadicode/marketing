@@ -43,7 +43,7 @@
   "home": {
     "title": "Software that takes you places.",
     "kicker": "Where are you trying to go?",
-    "description": "Bring us an idea, a slow process, or something that's just not working — you don't need to know the technical fix.",
+    "description": "Show us what is getting in the way. You do not need to arrive with a technical answer.",
     "primaryCta": "Let's talk about your business",
     "secondaryCta": "See where we've gone",
     "messyHeading": "Bring us the messy version.",
@@ -72,20 +72,21 @@
     ],
     "perspectiveHeading": "You know your business. We bring a different perspective.",
     "perspectiveBody": [
-      "You know your customers, your industry, your workflows, and the history behind why things are the way they are. We bring curiosity, problem-solving experience, and the technical skill to build.",
-      "Neither of us just hands the other a list. The interesting opportunities show up somewhere in the conversation — usually when someone asks, \"wait, if we had that, couldn't we also…?\""
+      "You know the details of how your business works. We listen closely, ask good questions, and know how to build.",
+      "The best opportunities tend to show up in the conversation. Often, someone asks, \"wait, if we had that, couldn't we also…?\""
     ],
     "perspectiveYourBusinessLabel": "Your business",
     "perspectiveOurLabel": "Our perspective",
     "perspectiveCenterLabel": "what becomes possible",
     "processHeading": "How we work",
-    "processImageAlt": "Listen, Imagine, Build, Learn, Improve — real progress isn't a straight line, so Improve feeds back into Listen and the cycle starts again.",
+    "processImageAlt": "The work moves from listening to building and learning, then loops back when there is more to understand.",
     "situationsHeading": "Where should we start?",
     "situationsDescription": "Start with what's actually going on, not what you think you need.",
     "situations": [
       {
         "title": "I have an idea.",
-        "response": "Let's explore it."
+        "response": "Let's explore it.",
+        "annotation": "doesn't have to be fully baked"
       },
       {
         "title": "This takes way too much time.",
@@ -93,7 +94,8 @@
       },
       {
         "title": "Our current system isn't working anymore.",
-        "response": "Let's understand why before replacing it."
+        "response": "Let's understand why before replacing it.",
+        "annotation": "before we replace it... why?"
       },
       {
         "title": "We need a better way to reach or serve our customers.",
@@ -101,7 +103,8 @@
       },
       {
         "title": "Honestly, I'm not sure.",
-        "response": "That's okay too."
+        "response": "That's okay too.",
+        "annotation": "honestly, this one's interesting"
       }
     ],
     "situationsLinkLabel": "See how we think about this →",
@@ -109,16 +112,16 @@
     "caseStudiesDescription": "Every project starts somewhere. Here are a few places software has taken us and the people we've worked with.",
     "caseStudiesLinkLabel": "See all of where we've gone →",
     "trustHeading": "Sometimes the right answer is to leave it alone.",
-    "trustBody": "If your current system works, we'll say so. If a $30 tool already solves it, we'll point you to it. We build when building is genuinely the best move — not because it's what we sell.",
+    "trustBody": "If your current system works, we will say so. If there is an off-the-shelf tool that does the job, we will point you to it. We only build when it is worth building.",
     "ctaHeading": "Let's talk about your business.",
     "ctaBody": [
-      "No pitch. No homework. You don't need to know what you need.",
-      "Bring us an idea, a problem, something repetitive, or something you think could work better. We'll talk it through and tell you what we see. Then sleep on it."
+      "No pitch. No homework. You do not need to know what you need yet.",
+      "Tell us what has been on your mind. We will talk it through and give you our honest read."
     ]
   },
   "services": {
     "title": "How we help",
-    "description": "You probably don't know if you need a website, an integration, or a custom system — and that's fine. Start with what's actually going on. We'll figure out the rest with you.",
+    "description": "You may not know what will help yet. Start with what is happening, and we will figure out the next step with you.",
     "situations": [
       {
         "title": "I have an idea.",
@@ -142,7 +145,7 @@
       }
     ],
     "toolsHeading": "Once we know what's actually going on, here's the kind of thing we might reach for.",
-    "toolsDescription": "These are tools, not the point. We pick whichever one actually helps — sometimes more than one, sometimes none of them.",
+    "toolsDescription": "These are options, not a checklist. We use what helps and leave the rest alone.",
     "tools": [
       "Websites",
       "Automation",
@@ -159,11 +162,11 @@
     "eyebrow": "Product by Nomadicode",
     "kicker": "One system, fewer tabs.",
     "title": "FlowDek",
-    "description": "One embedded system for estimates, scheduling, notifications, rewards, and reviews. It fits into the workflow your business already uses, not the other way around.",
+    "description": "FlowDek brings estimates, scheduling, and customer follow-up into the way your business already works.",
     "primaryCta": "Get a demo",
     "secondaryCta": "See what's included",
     "modulesHeading": "What's inside",
-    "modulesDescription": "Six modules that work together or independently. Use only what your business needs.",
+    "modulesDescription": "Use the parts that fit your business. Leave the rest out.",
     "modules": [
       {
         "title": "Smart Estimate Generation",
@@ -211,6 +214,7 @@
   "work": {
     "title": "Where we've gone",
     "description": "Every project starts somewhere. Here are a few places software has taken us and the people we've worked with.",
+    "annotation": "not a portfolio",
     "caseStudyLabels": {
       "started": "Where we started",
       "discovered": "What we discovered",
@@ -262,16 +266,16 @@
   },
   "about": {
     "title": "About Nomadicode",
-    "description": "Nomadicode started with a simple idea: software should take you somewhere. Not toward more software — toward a better way of working, a new opportunity, or something that wasn't possible before.",
+    "description": "Nomadicode started with a simple idea: software should take you somewhere useful. That might mean a better way to work or a new way to serve customers.",
     "notJustTitle": "We're not just engineers you hire.",
     "notJustBody": [
-      "Most software companies wait for a spec. We'd rather sit down with you, hear about the business, and ask a lot of questions — some of them not obviously related to whatever you first asked about.",
+      "Most software companies wait for a spec. We would rather hear about the business and ask questions, including the ones that seem unrelated at first.",
       "That's usually where the more interesting work comes from. We walk into something messy or unfamiliar, get genuinely knowledgeable about it, and look for what's possible once we understand it."
     ],
     "whoWeAreTitle": "Who we are",
     "whoWeAreBody": [
-      "Nomadicode is a team based in Utah and Colombia. Two places, one way of working: curious, hands-on, and genuinely invested in the problem in front of us.",
-      "Working across two countries has shaped how we think, not just where we sit. It's given us range — different backgrounds, different experiences, a habit of asking questions rather than assuming we already know the answer."
+      "Nomadicode is a team based in Utah and Colombia. We work closely, stay curious, and take the problem in front of us seriously.",
+      "Working across two countries has shaped how we think. It keeps us asking questions instead of assuming we already know the answer."
     ],
     "wontDoTitle": "What we won't do",
     "wontDoBody": [
@@ -280,7 +284,7 @@
     ],
     "technicalTitle": "On the technical side",
     "technicalBody": [
-      "Underneath the conversation, there's a full engineering team: web and mobile applications, integrations, automation, custom backend systems, and applied AI where it genuinely helps. We work across modern frameworks and can meet an existing codebase wherever it is."
+      "Behind the conversation is a full engineering team. We build new software, improve existing systems, and can join a codebase wherever it is."
     ],
     "technicalNotePrefix": "If you want to go deeper on the technical side of a specific project, the case studies on",
     "technicalNoteLinkLabel": "Where We've Gone",
@@ -291,12 +295,12 @@
     "eyebrow": "Careers",
     "kicker": "Come build the boring parts, and the fun ones.",
     "title": "Work on real problems for\nreal businesses.",
-    "description": "We're a small, senior team. No layers of process between you and the code.",
-    "subDescription": "Right now, the team is one US based, native English speaking founder and lead developer. We are growing a nearshore team with developers in Colombia.",
+    "description": "We're a small senior team. You will be close to the code and the people who use it.",
+    "subDescription": "Today, Nomadicode is led by a US-based founder and lead developer. We are growing our team in Colombia as the work calls for it.",
     "traits": [
       {
         "title": "Varied work",
-        "description": "Migrations, automation, and product work in the same month, not the same ticket queue forever."
+        "description": "The work changes. One month might be a migration; the next could be a product feature."
       },
       {
         "title": "Direct client contact",
@@ -315,17 +319,16 @@
   "contact": {
     "title": "Let's talk about your business.",
     "body": [
-      "No pitch. No homework. You don't need to know what you need.",
-      "Bring us an idea, a problem, something repetitive, or something you think could work better. We'll talk it through, ask questions, and tell you what we see.",
-      "You'll leave with a summary of what we discussed and what we'd recommend. Then sleep on it. If you want us to help make it happen, we'd love to. If not, the conversation was still worth having."
+      "No pitch. No homework. You do not need to know what you need yet.",
+      "Tell us what has been on your mind. We will ask questions, give you our honest read, and send you a short summary after the call."
     ],
-    "duration": "Usually 30–60 minutes.",
+    "duration": "Plan on about half an hour.",
     "form": {
       "name": "Name",
       "business": "Business / organization",
       "email": "Email or preferred contact",
       "message": "What do you want to talk about?",
-      "messageHint": "An idea, a problem, something repetitive, or something you think could work better. Send us the messy version.",
+      "messageHint": "Tell us what is on your mind. The rough version is enough.",
       "submit": "Send it over",
       "sending": "Sending…",
       "success": "Thanks. We will be in touch within one business day.",

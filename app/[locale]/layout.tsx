@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Source_Sans_3, Source_Serif_4 } from 'next/font/google';
+import { Caveat, Source_Sans_3, Source_Serif_4 } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import '@/app/globals.css';
 import { isLocale, locales, site, type Locale } from '@/app/lib/site';
@@ -17,6 +17,13 @@ const sourceSerif = Source_Serif_4({
   weight: ['400', '500', '600', '700'],
   style: ['normal', 'italic'],
   variable: '--font-serif',
+  display: 'swap',
+});
+
+const caveat = Caveat({
+  subsets: ['latin'],
+  weight: ['500', '600'],
+  variable: '--font-hand',
   display: 'swap',
 });
 
@@ -41,7 +48,7 @@ export default function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${sourceSans.variable} ${sourceSerif.variable}`}
+      className={`${sourceSans.variable} ${sourceSerif.variable} ${caveat.variable}`}
     >
       <body className="bg-canvas font-sans text-ink">{children}</body>
       {gaId && <GoogleAnalytics gaId={gaId} />}

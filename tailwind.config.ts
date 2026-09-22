@@ -35,6 +35,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-sans)', 'Helvetica', 'Arial', 'sans-serif'],
         serif: ['var(--font-serif)', 'Georgia', 'serif'],
+        hand: ['var(--font-hand)', 'cursive'],
       },
       maxWidth: {
         shell: '1200px',

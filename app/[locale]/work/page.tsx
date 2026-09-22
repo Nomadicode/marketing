@@ -46,7 +46,11 @@ export default async function WorkPage({
     <>
       <SiteHeader locale={locale} currentPath="work" />
       <main>
-        <PageHero title={w.title} description={w.description} />
+        <PageHero
+          title={w.title}
+          description={w.description}
+          annotation={w.annotation}
+        />
 
         <CaseStudyDetail caseStudies={caseStudies} labels={w.caseStudyLabels} />
 

@@ -43,7 +43,7 @@
   "home": {
     "title": "Software que te lleva a nuevos lugares.",
     "kicker": "¿A dónde quieres llegar?",
-    "description": "Tráenos una idea, un proceso lento, o algo que simplemente no está funcionando. No necesitas saber la solución técnica.",
+    "description": "Muéstranos qué se está interponiendo. No necesitas llegar con una respuesta técnica.",
     "primaryCta": "Hablemos de tu negocio",
     "secondaryCta": "Ve a dónde hemos llegado",
     "messyHeading": "Tráenos la versión desordenada.",
@@ -72,20 +72,21 @@
     ],
     "perspectiveHeading": "Tú conoces tu negocio. Nosotros aportamos otra mirada.",
     "perspectiveBody": [
-      "Conoces a tus clientes, tu industria, tus flujos de trabajo y la historia detrás de por qué las cosas son como son. Nosotros aportamos curiosidad, experiencia resolviendo problemas y la habilidad técnica para construir.",
-      "Ninguno de los dos simplemente entrega una lista. Las oportunidades interesantes aparecen en algún punto de la conversación, normalmente cuando alguien pregunta: \"espera, si tuviéramos eso, ¿no podríamos también…?\""
+      "Conoces los detalles de cómo funciona tu negocio. Nosotros escuchamos, hacemos buenas preguntas y sabemos construir.",
+      "Las mejores oportunidades suelen aparecer en la conversación. A menudo alguien pregunta: \"espera, si tuviéramos eso, ¿no podríamos también…?\""
     ],
     "perspectiveYourBusinessLabel": "Tu negocio",
     "perspectiveOurLabel": "Nuestra mirada",
     "perspectiveCenterLabel": "lo que se vuelve posible",
     "processHeading": "Cómo trabajamos",
-    "processImageAlt": "Escuchar, Imaginar, Construir, Aprender, Mejorar: el progreso real no es una línea recta, así que Mejorar retroalimenta a Escuchar y el ciclo empieza de nuevo.",
+    "processImageAlt": "El trabajo pasa de escuchar a construir y aprender. Luego vuelve atrás cuando hay más por entender.",
     "situationsHeading": "¿Por dónde empezamos?",
     "situationsDescription": "Empieza por lo que realmente está pasando, no por lo que crees que necesitas.",
     "situations": [
       {
         "title": "Tengo una idea.",
-        "response": "Explorémosla."
+        "response": "Explorémosla.",
+        "annotation": "no tiene que estar completamente definida"
       },
       {
         "title": "Esto toma demasiado tiempo.",
@@ -93,7 +94,8 @@
       },
       {
         "title": "Nuestro sistema actual ya no funciona.",
-        "response": "Entendamos por qué antes de reemplazarlo."
+        "response": "Entendamos por qué antes de reemplazarlo.",
+        "annotation": "antes de reemplazarlo... ¿por qué?"
       },
       {
         "title": "Necesitamos una mejor forma de llegar a nuestros clientes.",
@@ -101,7 +103,8 @@
       },
       {
         "title": "Sinceramente, no estoy seguro.",
-        "response": "También está bien."
+        "response": "También está bien.",
+        "annotation": "honestamente, este es interesante"
       }
     ],
     "situationsLinkLabel": "Mira cómo pensamos esto →",
@@ -109,16 +112,16 @@
     "caseStudiesDescription": "Todo proyecto empieza en algún lugar. Aquí hay algunos lugares a los que el software nos ha llevado, junto con la gente con la que hemos trabajado.",
     "caseStudiesLinkLabel": "Ve todo a dónde hemos llegado →",
     "trustHeading": "A veces la respuesta correcta es dejarlo tal como está.",
-    "trustBody": "Si tu sistema actual funciona, te lo diremos. Si una herramienta de $30 ya lo resuelve, te la señalaremos. Construimos cuando construir es realmente la mejor opción, no porque sea lo que vendemos.",
+    "trustBody": "Si tu sistema actual funciona, te lo diremos. Si una herramienta existente hace el trabajo, te la recomendaremos. Solo construimos cuando vale la pena construir.",
     "ctaHeading": "Hablemos de tu negocio.",
     "ctaBody": [
-      "Sin discurso de ventas. Sin tarea previa. No necesitas saber qué necesitas.",
-      "Tráenos una idea, un problema, algo repetitivo, o algo que crees que podría funcionar mejor. Lo conversamos y te decimos qué vemos. Luego, a dormirlo."
+      "Sin discurso de ventas. Sin tarea. No necesitas saber qué necesitas todavía.",
+      "Cuéntanos qué tienes en mente. Lo conversamos y te damos una opinión honesta."
     ]
   },
   "services": {
     "title": "Cómo ayudamos",
-    "description": "Probablemente no sabes si necesitas un sitio web, una integración o un sistema a medida — y está bien. Empieza contándonos qué está pasando. Resolveremos el resto juntos.",
+    "description": "Puede que todavía no sepas qué ayudaría. Empieza por contarnos qué está pasando y juntos vemos el siguiente paso.",
     "situations": [
       {
         "title": "Tengo una idea.",
@@ -142,7 +145,7 @@
       }
     ],
     "toolsHeading": "Una vez que sabemos qué está pasando realmente, esto es lo que solemos usar.",
-    "toolsDescription": "Son herramientas, no el objetivo. Elegimos la que realmente ayuda — a veces más de una, a veces ninguna.",
+    "toolsDescription": "Son opciones, no una lista obligatoria. Usamos lo que ayuda y dejamos las demás por fuera.",
     "tools": [
       "Sitios web",
       "Automatización",
@@ -159,11 +162,11 @@
     "eyebrow": "Producto de Nomadicode",
     "kicker": "Un solo sistema, menos pestañas.",
     "title": "FlowDek",
-    "description": "Un sistema embebido para estimados, agendamiento, notificaciones, recompensas y reseñas. Se integra al flujo de trabajo que tu negocio ya usa, no al revés.",
+    "description": "FlowDek reúne estimados, agendamiento y seguimiento de clientes dentro de la forma en que tu negocio ya trabaja.",
     "primaryCta": "Solicitar una demo",
     "secondaryCta": "Ver qué incluye",
     "modulesHeading": "Qué incluye",
-    "modulesDescription": "Seis módulos que funcionan juntos o de forma independiente. Usa solo lo que tu negocio necesita.",
+    "modulesDescription": "Usa las partes que le sirvan a tu negocio. Deja fuera las demás.",
     "modules": [
       {
         "title": "Generación Inteligente de Estimados",
@@ -211,6 +214,7 @@
   "work": {
     "title": "A dónde hemos llegado",
     "description": "Todo proyecto empieza en algún lugar. Aquí hay algunos de los lugares a los que el software nos ha llevado, junto a la gente con la que hemos trabajado.",
+    "annotation": "no es un portafolio",
     "caseStudyLabels": {
       "started": "Dónde empezamos",
       "discovered": "Qué descubrimos",
@@ -262,16 +266,16 @@
   },
   "about": {
     "title": "Sobre Nomadicode",
-    "description": "Nomadicode nació de una idea simple: el software debe llevarte a algún lugar. No hacia más software, sino hacia una mejor forma de trabajar, una nueva oportunidad o algo que antes no era posible.",
+    "description": "Nomadicode nació de una idea simple: el software debe llevarte a algún lugar útil. Puede ser una mejor forma de trabajar o una nueva forma de atender a tus clientes.",
     "notJustTitle": "No somos solo ingenieros que contratas.",
     "notJustBody": [
-      "La mayoría de las empresas de software esperan una especificación. Nosotros preferimos sentarnos contigo, escuchar sobre tu negocio y hacer muchas preguntas — algunas sin relación obvia con lo que preguntaste al principio.",
+      "La mayoría de las empresas de software esperan una especificación. Nosotros preferimos escuchar sobre tu negocio y hacer preguntas, incluso las que al principio parecen no tener relación.",
       "Ahí suele surgir el trabajo más interesante. Entramos a algo desordenado o desconocido, nos volvemos genuinamente expertos en ello y buscamos qué es posible una vez que lo entendemos."
     ],
     "whoWeAreTitle": "Quiénes somos",
     "whoWeAreBody": [
-      "Nomadicode es un equipo basado en Utah y Colombia. Dos lugares, una sola forma de trabajar: curiosa, práctica y genuinamente comprometida con el problema que tenemos enfrente.",
-      "Trabajar entre dos países ha moldeado cómo pensamos, no solo dónde estamos sentados. Nos ha dado rango — distintos trasfondos, distintas experiencias, el hábito de preguntar en vez de asumir que ya sabemos la respuesta."
+      "Nomadicode es un equipo basado en Utah y Colombia. Trabajamos de cerca, mantenemos la curiosidad y tomamos en serio el problema que tenemos enfrente.",
+      "Trabajar entre dos países ha moldeado cómo pensamos. Nos mantiene haciendo preguntas en vez de asumir que ya sabemos la respuesta."
     ],
     "wontDoTitle": "Lo que no haremos",
     "wontDoBody": [
@@ -280,7 +284,7 @@
     ],
     "technicalTitle": "Del lado técnico",
     "technicalBody": [
-      "Detrás de la conversación hay un equipo de ingeniería completo: aplicaciones web y móviles, integraciones, automatización, sistemas backend a medida e IA aplicada donde realmente ayuda. Trabajamos con frameworks modernos y podemos adaptarnos a un código existente esté donde esté."
+      "Detrás de la conversación hay un equipo de ingeniería completo. Construimos software nuevo, mejoramos sistemas existentes y podemos trabajar con un código ya hecho."
     ],
     "technicalNotePrefix": "Si quieres profundizar en el lado técnico de un proyecto específico, los casos de estudio en",
     "technicalNoteLinkLabel": "A Dónde Hemos Llegado",
@@ -291,12 +295,12 @@
     "eyebrow": "Empleo",
     "kicker": "Ven a construir lo aburrido, y lo divertido.",
     "title": "Trabaja en problemas reales para\nnegocios reales.",
-    "description": "Somos un equipo pequeño y senior. Sin capas de proceso entre tú y el código.",
-    "subDescription": "Por ahora ese equipo es una sola persona: un fundador y desarrollador principal radicado en EE.UU. y hablante nativo de inglés. Estamos construyendo un modelo de nearshoring con desarrolladores basados en Colombia.",
+    "description": "Somos un equipo senior y pequeño. Estarás cerca del código y de las personas que lo usan.",
+    "subDescription": "Hoy Nomadicode está dirigido por un fundador y desarrollador principal radicado en Estados Unidos. Estamos haciendo crecer el equipo en Colombia según lo requiera el trabajo.",
     "traits": [
       {
         "title": "Trabajo variado",
-        "description": "Migraciones, automatización y trabajo de producto en el mismo mes, no la misma cola de tickets para siempre."
+        "description": "El trabajo cambia. Un mes puede ser una migración y el siguiente una función de producto."
       },
       {
         "title": "Contacto directo con clientes",
@@ -315,17 +319,16 @@
   "contact": {
     "title": "Hablemos sobre tu negocio.",
     "body": [
-      "Sin discurso de ventas. Sin tarea. No necesitas saber qué necesitas.",
-      "Tráenos una idea, un problema, algo repetitivo o algo que crees que podría funcionar mejor. Lo conversamos, hacemos preguntas y te contamos qué vemos.",
-      "Te vas con un resumen de lo que hablamos y lo que recomendaríamos. Luego duérmelo. Si quieres que te ayudemos a hacerlo realidad, nos encantaría. Si no, la conversación valió la pena igual."
+      "Sin discurso de ventas. Sin tarea. No necesitas saber qué necesitas todavía.",
+      "Cuéntanos qué tienes en mente. Haremos preguntas, te daremos una opinión honesta y te enviaremos un resumen corto después de la llamada."
     ],
-    "duration": "Normalmente 30–60 minutos.",
+    "duration": "Calcula unos 30 minutos.",
     "form": {
       "name": "Nombre",
       "business": "Negocio / organización",
       "email": "Correo o contacto preferido",
       "message": "¿De qué quieres hablar?",
-      "messageHint": "Una idea, un problema, algo repetitivo o algo que crees que podría funcionar mejor. Envíanos la versión desordenada.",
+      "messageHint": "Cuéntanos qué tienes en mente. La versión desordenada es suficiente.",
       "submit": "Enviarlo",
       "sending": "Enviando…",
       "success": "Gracias. Te contactaremos dentro de un día hábil.",

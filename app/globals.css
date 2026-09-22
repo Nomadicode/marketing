@@ -11,13 +11,22 @@
 }
 
 html {
+  min-height: 100%;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  flex-direction: column;
   background: oklch(98% 0.006 70);
   color: oklch(20% 0.015 260);
+}
+
+body > main {
+  flex: 1 0 auto;
 }
 
 a {
