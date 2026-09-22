@@ -56,7 +56,7 @@ export function MobileNav({
         aria-label={menuLabel}
         aria-expanded={isOpen}
         onClick={() => setIsOpen(true)}
-        className="flex h-9 w-9 items-center justify-center rounded-md text-ink"
+        className="flex h-9 w-9 items-center justify-center rounded-md text-navy-foreground"
       >
         <Menu size={22} />
       </button>
@@ -86,20 +86,20 @@ export function MobileNav({
               aria-label={menuLabel}
               className={[
                 'fixed inset-y-0 right-0 z-50 flex w-[82vw] max-w-[360px] flex-col',
-                'border-l border-border bg-canvas-raised shadow-2xl',
+                'border-l border-navy-border bg-navy-strong shadow-2xl',
                 'transition-transform duration-300 ease-in-out',
                 isOpen ? 'translate-x-0' : 'translate-x-full',
               ].join(' ')}
             >
-              <div className="flex items-center justify-between border-b border-border px-5 py-[18px]">
-                <span className="text-sm font-semibold text-ink">
+              <div className="flex items-center justify-between border-b border-navy-border px-5 py-[18px]">
+                <span className="text-sm font-semibold text-navy-foreground">
                   {menuLabel}
                 </span>
                 <button
                   type="button"
                   aria-label={closeLabel}
                   onClick={() => setIsOpen(false)}
-                  className="flex h-9 w-9 items-center justify-center rounded-md text-ink"
+                  className="flex h-9 w-9 items-center justify-center rounded-md text-navy-foreground"
                 >
                   <X size={22} />
                 </button>
@@ -117,8 +117,8 @@ export function MobileNav({
                     className={[
                       'rounded-md px-2 py-3 text-lg',
                       link.active
-                        ? 'font-semibold text-ink'
-                        : 'text-muted hover:text-ink',
+                        ? 'font-semibold text-navy-foreground'
+                        : 'text-navy-muted hover:text-navy-foreground',
                     ].join(' ')}
                   >
                     {link.label}
@@ -126,7 +126,9 @@ export function MobileNav({
                 ))}
 
                 <div className="mt-4 flex items-center justify-between px-2">
-                  <span className="text-xs text-faint">{languageLabel}</span>
+                  <span className="text-xs text-navy-muted">
+                    {languageLabel}
+                  </span>
                   <LanguageSelect
                     locale={locale}
                     currentPath={currentPath}
@@ -137,7 +139,7 @@ export function MobileNav({
                 <Link
                   href={bookCallHref}
                   onClick={() => setIsOpen(false)}
-                  className="mt-6 rounded-md bg-accent px-5 py-3 text-center text-sm font-semibold text-canvas"
+                  className="mt-6 rounded-md bg-accent px-5 py-3 text-center text-sm font-semibold text-accent-foreground"
                 >
                   {bookCallLabel}
                 </Link>

@@ -3,24 +3,32 @@ import { createClient } from '@supabase/supabase-js';
 
 type ContactMessage = {
   name: string;
+  business: string | null;
   email: string;
   message: string;
 };
 
-const requiredFields: Array<keyof ContactMessage> = [
+const requiredFields: Array<keyof Omit<ContactMessage, 'business'>> = [
   'name',
   'email',
   'message',
 ];
 
-function isContactMessage(value: unknown): value is ContactMessage {
+function isContactMessage(
+  value: unknown,
+): value is Omit<ContactMessage, 'business'> & { business?: unknown } {
   if (!value || typeof value !== 'object') return false;
   const message = value as Record<string, unknown>;
-  return requiredFields.every(
+  const requiredValid = requiredFields.every(
     (key) =>
       typeof message[key] === 'string' &&
       message[key].trim().length > 0 &&
       message[key].trim().length <= 4000,
+  );
+  if (!requiredValid) return false;
+  return (
+    message.business === undefined ||
+    (typeof message.business === 'string' && message.business.length <= 200)
   );
 }
 
@@ -69,8 +77,8 @@ async function sendNotification(
       sender: { email: email.from, name: email.fromName },
       to: [{ email: email.to }],
       subject: `New contact message: ${contact.name}`,
-      textContent: `New contact form submission\n\nName: ${contact.name}\nEmail: ${contact.email}\n\nMessage:\n${contact.message}`,
-      htmlContent: `<h1>New contact form submission</h1><p><strong>Name:</strong> ${escapeHtml(contact.name)}<br><strong>Email:</strong> ${escapeHtml(contact.email)}</p><p>${escapeHtml(contact.message).replace(/\n/g, '<br>')}</p>`,
+      textContent: `New contact form submission\n\nName: ${contact.name}${contact.business ? `\nBusiness: ${contact.business}` : ''}\nEmail: ${contact.email}\n\nMessage:\n${contact.message}`,
+      htmlContent: `<h1>New contact form submission</h1><p><strong>Name:</strong> ${escapeHtml(contact.name)}<br>${contact.business ? `<strong>Business:</strong> ${escapeHtml(contact.business)}<br>` : ''}<strong>Email:</strong> ${escapeHtml(contact.email)}</p><p>${escapeHtml(contact.message).replace(/\n/g, '<br>')}</p>`,
       tags: ['contact-notification'],
     }),
   }).catch(() => null);
@@ -99,8 +107,11 @@ export async function POST(request: Request) {
       { status: 503 },
     );
 
+  const trimmedBusiness =
+    typeof body.business === 'string' ? body.business.trim() : '';
   const contact: ContactMessage = {
     name: body.name.trim(),
+    business: trimmedBusiness.length > 0 ? trimmedBusiness : null,
     email: body.email.trim(),
     message: body.message.trim(),
   };

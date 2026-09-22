@@ -1,14 +1,10 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { SiteFooter } from '@/app/components/layout/site-footer';
 import { SiteHeader } from '@/app/components/layout/site-header';
 import { Section } from '@/app/components/layout/section';
-import { PageIntro } from '@/app/components/sections/page-intro';
+import { PageHero } from '@/app/components/sections/page-hero';
 import { CtaBanner } from '@/app/components/sections/cta-banner';
-import { TextBlock } from '@/app/components/cards/text-block';
-import { ValueCard } from '@/app/components/cards/value-card';
-import { BorderedCard } from '@/app/components/cards/bordered-card';
 import { pageMetadata } from '@/app/lib/metadata';
 import { getMessages } from '@/app/lib/messages';
 import { isLocale, localizedPath, locales, type Locale } from '@/app/lib/site';
@@ -38,85 +34,68 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
   const m = getMessages(locale);
   const a = m.about;
 
+  const sections = [
+    { title: a.notJustTitle, body: a.notJustBody },
+    { title: a.whoWeAreTitle, body: a.whoWeAreBody },
+    { title: a.wontDoTitle, body: a.wontDoBody },
+  ];
+
   return (
     <>
       <SiteHeader locale={locale} currentPath="about" />
       <main>
-        <PageIntro
-          eyebrow={a.eyebrow}
-          title={a.title}
-          description={a.description}
-        />
+        <PageHero title={a.title} description={a.description} />
 
-        <Section>
-          <div className="mx-auto grid max-w-shell grid-cols-1 gap-14 md:grid-cols-2">
-            <TextBlock title={a.believeTitle} description={a.believeBody} />
-            <TextBlock title={a.whoTitle} description={a.whoBody} />
-          </div>
-        </Section>
-
-        <Section tone="raised" borderTop borderBottom>
-          <div className="mx-auto max-w-shell">
-            <h2 className="mb-10 text-2xl font-bold text-ink">
-              {a.approachHeading}
-            </h2>
-            <div className="grid grid-cols-1 gap-9 sm:grid-cols-2 lg:grid-cols-4">
-              {a.approach.map((item) => (
-                <ValueCard
-                  key={item.title}
-                  title={item.title}
-                  description={item.description}
-                />
+        {sections.map((section, index) => (
+          <Section
+            key={section.title}
+            tone={index % 2 === 0 ? 'base' : 'raised'}
+          >
+            <div className="mx-auto max-w-[720px]">
+              <h2 className="mb-4 font-serif text-[26px] font-semibold text-ink">
+                {section.title}
+              </h2>
+              {section.body.map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="mb-4 text-base text-ink/80 last:mb-0"
+                >
+                  {paragraph}
+                </p>
               ))}
             </div>
-          </div>
-        </Section>
+          </Section>
+        ))}
 
-        <Section>
-          <div className="mx-auto grid max-w-shell grid-cols-1 gap-14 md:grid-cols-2">
-            <TextBlock title={a.structureTitle} description={a.structureBody} />
-            <TextBlock title={a.growingTitle} description={a.growingBody} />
-          </div>
-        </Section>
-
-        <Section>
-          <div className="mx-auto max-w-shell">
-            <h2 className="mb-10 text-2xl font-bold text-ink">
-              {a.builtHeading}
+        <Section tone={sections.length % 2 === 0 ? 'base' : 'raised'}>
+          <div className="mx-auto max-w-[720px]">
+            <h2 className="mb-4 font-serif text-[26px] font-semibold text-ink">
+              {a.technicalTitle}
             </h2>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <BorderedCard
-                icon={
-                  <Image
-                    src="/nex-icon.png"
-                    alt="Nex"
-                    width={44}
-                    height={44}
-                    className="rounded-[10px]"
-                  />
-                }
-                title="Nex"
-                description={a.nexShort}
-              />
-              <BorderedCard
-                icon={
-                  <Image
-                    src="/flowdek-logo.svg"
-                    alt="FlowDek"
-                    width={104}
-                    height={26}
-                  />
-                }
-                title="FlowDek"
-                description={a.flowdekShort}
-              />
-            </div>
+            {a.technicalBody.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="mb-4 text-base text-ink/80 last:mb-0"
+              >
+                {paragraph}
+              </p>
+            ))}
+            <p className="text-[15px] text-muted">
+              {a.technicalNotePrefix}{' '}
+              <a
+                href={localizedPath(locale, 'work')}
+                className="text-ink underline decoration-border-strong underline-offset-4"
+              >
+                {a.technicalNoteLinkLabel}
+              </a>
+              {a.technicalNoteSuffix}
+            </p>
           </div>
         </Section>
 
         <CtaBanner
           heading={a.ctaHeading}
-          actionLabel={m.home.primaryCta}
+          actionLabel={m.nav.bookCall}
           actionHref={localizedPath(locale, 'contact')}
         />
       </main>

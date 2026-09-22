@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { GitBranch, Workflow, Code2, FileSpreadsheet } from 'lucide-react';
 import { SiteFooter } from '@/app/components/layout/site-footer';
 import { SiteHeader } from '@/app/components/layout/site-header';
-import { Section } from '@/app/components/layout/section';
-import { PageIntro } from '@/app/components/sections/page-intro';
+import { PageHero } from '@/app/components/sections/page-hero';
+import { SituationsDetail } from '@/app/components/sections/situations-detail';
+import { ToolTags } from '@/app/components/sections/tool-tags';
 import { CtaBanner } from '@/app/components/sections/cta-banner';
-import { ServiceItem } from '@/app/components/cards/service-item';
 import { pageMetadata } from '@/app/lib/metadata';
 import { getMessages } from '@/app/lib/messages';
 import { isLocale, localizedPath, locales, type Locale } from '@/app/lib/site';
@@ -40,37 +39,23 @@ export default function ServicesPage({
   const m = getMessages(locale);
   const s = m.services;
 
-  const serviceIcons = [GitBranch, Workflow, Code2, FileSpreadsheet];
-
   return (
     <>
       <SiteHeader locale={locale} currentPath="services" />
       <main>
-        <PageIntro
-          eyebrow={s.eyebrow}
-          title={s.title}
-          description={s.description}
+        <PageHero title={s.title} description={s.description} />
+
+        <SituationsDetail situations={s.situations} />
+
+        <ToolTags
+          heading={s.toolsHeading}
+          description={s.toolsDescription}
+          tools={s.tools}
         />
-        <Section>
-          <div className="mx-auto grid max-w-shell grid-cols-1 gap-6 md:grid-cols-2">
-            {s.items.map((item, index) => {
-              const Icon = serviceIcons[index];
-              return (
-                <ServiceItem
-                  key={item.title}
-                  icon={<Icon size={28} className="text-accent" />}
-                  title={item.title}
-                  description={item.description}
-                  bullets={item.bullets}
-                />
-              );
-            })}
-          </div>
-        </Section>
+
         <CtaBanner
           heading={s.ctaHeading}
-          body={s.ctaBody}
-          actionLabel={m.home.primaryCta}
+          actionLabel={m.nav.bookCall}
           actionHref={localizedPath(locale, 'contact')}
         />
       </main>

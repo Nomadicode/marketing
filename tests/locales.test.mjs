@@ -26,15 +26,15 @@ test('en and es message files carry the same keys and array lengths', () => {
 
 test('every nav path has a matching localized page directory', () => {
   const en = JSON.parse(readFileSync('messages/en.json', 'utf8'));
-  const navPaths = [
-    'services',
-    'flowdek',
-    'work',
-    'pricing',
-    'about',
-    'careers',
-  ];
-  for (const path of navPaths) {
-    assert.ok(en.nav[path], `messages.en.nav.${path} is missing`);
+  const navPathKeys = {
+    services: 'howWeHelp',
+    flowdek: 'flowdek',
+    work: 'whereWeveGone',
+    pricing: 'pricing',
+    about: 'about',
+    careers: 'careers',
+  };
+  for (const [path, key] of Object.entries(navPathKeys)) {
+    assert.ok(en.nav[key], `messages.en.nav.${key} (for /${path}) is missing`);
   }
 });

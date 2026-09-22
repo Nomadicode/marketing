@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 type SectionProps = {
   id?: string;
-  tone?: 'base' | 'raised';
+  tone?: 'base' | 'raised' | 'navy';
   grid?: boolean;
   borderTop?: boolean;
   borderBottom?: boolean;
@@ -19,11 +19,18 @@ export function Section({
   className = '',
   children,
 }: SectionProps) {
+  const toneBg =
+    tone === 'raised'
+      ? 'bg-canvas-raised'
+      : tone === 'navy'
+        ? 'bg-navy'
+        : 'bg-canvas';
+  const borderColor = tone === 'navy' ? 'border-navy-border' : 'border-border';
   const classes = [
-    tone === 'raised' ? 'bg-canvas-raised' : 'bg-canvas',
-    grid ? 'bg-dot-grid' : '',
-    borderTop ? 'border-t border-border' : '',
-    borderBottom ? 'border-b border-border' : '',
+    toneBg,
+    grid && tone !== 'navy' ? 'bg-dot-grid' : '',
+    borderTop ? `border-t ${borderColor}` : '',
+    borderBottom ? `border-b ${borderColor}` : '',
     'px-6 py-16 md:px-12 md:py-20',
     className,
   ]

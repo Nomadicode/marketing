@@ -49,7 +49,7 @@ export function CatalogSection({
             <Card className="h-full transition-colors hover:border-border-strong">
               <CardHeader className="px-7 pt-7">
                 <div className="flex items-center justify-between gap-4">
-                  <div className="flex size-11 items-center justify-center overflow-hidden rounded-lg bg-canvas">
+                  <div className="flex size-11 items-center justify-center overflow-hidden rounded-lg bg-canvas-raised">
                     {entry.iconUrl ? (
                       <Image
                         src={entry.iconUrl}
@@ -77,7 +77,7 @@ export function CatalogSection({
                     />
                   )}
                 </div>
-                <CardTitle className="text-lg font-bold text-ink">
+                <CardTitle className="font-serif text-lg font-medium text-ink">
                   {entry.name}
                 </CardTitle>
               </CardHeader>
