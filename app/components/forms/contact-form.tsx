@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import posthog from 'posthog-js';
 import type { Messages } from '@/app/lib/messages';
 
 type FormState = {
@@ -36,9 +37,18 @@ export function ContactForm({
         body: JSON.stringify(form),
       });
       if (!response.ok) throw new Error('Contact request failed');
+      posthog.identify(form.email.trim().toLowerCase(), {
+        email: form.email.trim(),
+        name: form.name.trim(),
+      });
+      posthog.capture('contact_form_submitted', {
+        has_business: form.business.trim().length > 0,
+      });
       setForm(initial);
       setStatus('success');
-    } catch {
+    } catch (error) {
+      posthog.capture('contact_form_failed');
+      posthog.captureException(error);
       setStatus('error');
     }
   }
