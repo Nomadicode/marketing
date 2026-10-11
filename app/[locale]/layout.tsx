@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import '@/app/globals.css';
 import { isLocale, locales, site, type Locale } from '@/app/lib/site';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { PostHogInit } from '@/app/components/analytics/posthog-init';
 
 const sourceSans = Source_Sans_3({
   subsets: ['latin'],
@@ -50,7 +51,10 @@ export default function LocaleLayout({
       lang={locale}
       className={`${sourceSans.variable} ${sourceSerif.variable} ${caveat.variable}`}
     >
-      <body className="bg-canvas font-sans text-ink">{children}</body>
+      <body className="bg-canvas font-sans text-ink">
+        <PostHogInit />
+        {children}
+      </body>
       {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
