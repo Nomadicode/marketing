@@ -24,8 +24,4 @@
       "bucket_name": "nomadicode-site-cache",
     },
   ],
-  "images": {
-    // next/image optimisation through Cloudflare Images.
-    "binding": "IMAGES",
-  },
 }
