@@ -8,6 +8,7 @@ on:
 permissions:
   contents: read
   deployments: write
+  id-token: write
 
 concurrency:
   group: production-deployment
@@ -17,6 +18,7 @@ jobs:
   deploy:
     # Database changes must finish before the site is allowed to replace production.
     runs-on: ubuntu-latest
+    # Infisical's OIDC identity only trusts jobs in the production environment.
     environment: production
     steps:
       - uses: actions/checkout@v4
@@ -26,20 +28,30 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Validate revision
-        run: npm run format:check && npm run lint && npm run typecheck && npm test && npm run build
+        run: npm run format:check && npm run lint && npm run typecheck && npm test
+      - name: Load configuration from Infisical
+        # Fetches Nomadicode - Marketing › Prod › /site with GitHub's OIDC token;
+        # every key in that folder becomes an env var for the steps below.
+        uses: Infisical/secrets-action@d2e351f16c6ca20d17c85e6c992e04bdeb64e87d # v1.0.18
+        with:
+          method: oidc
+          identity-id: 56f46eef-7eb8-4559-89ab-0e7b307e819a
+          project-slug: nomadicode-marketing-dh-rc
+          env-slug: prod
+          secret-path: /site
       - name: Require production configuration
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
-          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
           SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
           SUPABASE_PROJECT_ID: ${{ secrets.SUPABASE_PROJECT_ID }}
-        run: test -n "$NETLIFY_AUTH_TOKEN" && test -n "$NETLIFY_SITE_ID" && test -n "$NEXT_PUBLIC_SITE_URL" && test -n "$NEXT_PUBLIC_SUPABASE_URL" && test -n "$NEXT_PUBLIC_SUPABASE_ANON_KEY" && test -n "$SUPABASE_SERVICE_ROLE_KEY" && test -n "$SUPABASE_ACCESS_TOKEN" && test -n "$SUPABASE_DB_PASSWORD" && test -n "$SUPABASE_PROJECT_ID"
+        run: |
+          for v in NEXT_PUBLIC_SITE_URL NEXT_PUBLIC_SUPABASE_URL NEXT_PUBLIC_SUPABASE_ANON_KEY \
+                   SUPABASE_SERVICE_ROLE_KEY CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID \
+                   SUPABASE_ACCESS_TOKEN SUPABASE_DB_PASSWORD SUPABASE_PROJECT_ID; do
+            [ -n "${!v}" ] || { echo "::error::$v is empty"; exit 1; }
+          done
       - name: Set up Supabase CLI
         uses: supabase/setup-cli@v3
       - name: Apply Supabase migrations
@@ -50,16 +62,28 @@ jobs:
         run: |
           supabase link --project-ref "$SUPABASE_PROJECT_ID"
           supabase db push
-      - name: Deploy to Netlify production
+      - name: Build for Cloudflare Workers
+        # NEXT_PUBLIC_* values are inlined into the bundle at build time.
+        run: npx opennextjs-cloudflare build
+      - name: Deploy to Cloudflare Workers
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
-          BREVO_FROM_EMAIL: ${{ secrets.BREVO_FROM_EMAIL }}
-          BREVO_FROM_NAME: ${{ secrets.BREVO_FROM_NAME }}
-          CONTACT_NOTIFICATION_EMAIL: ${{ secrets.CONTACT_NOTIFICATION_EMAIL }}
-        run: npm exec netlify deploy -- --build --prod
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx opennextjs-cloudflare deploy
+      - name: Update runtime secrets
+        # Server-only settings are read at request time, so they live on the
+        # Worker itself rather than in the bundle.
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          node -e "
+          const keys = ['SUPABASE_SERVICE_ROLE_KEY', 'BREVO_API_KEY', 'BREVO_FROM_EMAIL', 'BREVO_FROM_NAME', 'CONTACT_NOTIFICATION_EMAIL'];
+          const out = Object.fromEntries(keys.filter((k) => process.env[k]).map((k) => [k, process.env[k]]));
+          require('fs').writeFileSync('runtime-secrets.json', JSON.stringify(out));
+          console.log('Runtime secrets:', Object.keys(out).join(', '));
+          "
+          npx wrangler secret bulk runtime-secrets.json
+      - name: Remove the runtime secrets file
+        if: always()
+        run: rm -f runtime-secrets.json

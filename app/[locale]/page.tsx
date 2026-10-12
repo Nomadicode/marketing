@@ -21,15 +21,16 @@ export function generateStaticParams() {
 
 export const revalidate = 300;
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
-}): Metadata {
-  if (!isLocale(params.locale)) return {};
-  const m = getMessages(params.locale);
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: requestedLocale } = await params;
+  if (!isLocale(requestedLocale)) return {};
+  const m = getMessages(requestedLocale);
   return pageMetadata(
-    params.locale,
+    requestedLocale,
     '',
     m.meta.homeTitle,
     m.meta.homeDescription,
@@ -39,10 +40,11 @@ export function generateMetadata({
 export default async function HomePage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  if (!isLocale(params.locale)) notFound();
-  const locale: Locale = params.locale;
+  const { locale: requestedLocale } = await params;
+  if (!isLocale(requestedLocale)) notFound();
+  const locale: Locale = requestedLocale;
   const m = getMessages(locale);
   const h = m.home;
   const caseStudies = await getPublishedCaseStudies();

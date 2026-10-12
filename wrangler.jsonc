@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nomadicode-site",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-09-15",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+  },
+  "services": [
+    {
+      // Self-reference used by OpenNext's cache; must match "name".
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "nomadicode-site",
+    },
+  ],
+  "r2_buckets": [
+    {
+      "binding": "NEXT_INC_CACHE_R2_BUCKET",
+      "bucket_name": "nomadicode-site-cache",
+    },
+  ],
+  "images": {
+    // next/image optimisation through Cloudflare Images.
+    "binding": "IMAGES",
+  },
+}

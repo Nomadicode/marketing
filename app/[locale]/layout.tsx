@@ -38,14 +38,18 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
-}: Readonly<{ children: React.ReactNode; params: { locale: string } }>) {
+}: Readonly<{
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}>) {
+  const { locale: requestedLocale } = await params;
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
-  if (!isLocale(params.locale)) notFound();
-  const locale = params.locale as Locale;
+  if (!isLocale(requestedLocale)) notFound();
+  const locale = requestedLocale as Locale;
   return (
     <html
       lang={locale}

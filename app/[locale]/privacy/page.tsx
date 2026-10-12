@@ -11,28 +11,30 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
-}): Metadata {
-  if (!isLocale(params.locale)) return {};
-  const m = getMessages(params.locale);
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale: requestedLocale } = await params;
+  if (!isLocale(requestedLocale)) return {};
+  const m = getMessages(requestedLocale);
   return pageMetadata(
-    params.locale,
+    requestedLocale,
     'privacy',
     m.meta.privacyTitle,
     m.meta.privacyDescription,
   );
 }
 
-export default function PrivacyPage({
+export default async function PrivacyPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  if (!isLocale(params.locale)) notFound();
-  const locale: Locale = params.locale;
+  const { locale: requestedLocale } = await params;
+  if (!isLocale(requestedLocale)) notFound();
+  const locale: Locale = requestedLocale;
   const m = getMessages(locale);
   const p = m.privacy;
 
